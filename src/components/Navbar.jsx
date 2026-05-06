@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles//Navbar.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -72,7 +72,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Propose Ideas
+              Submit Pitch
             </motion.button>
           </Link>
         </nav>
@@ -98,7 +98,7 @@ const Navbar = () => {
               ))}
 
               <Link to="/propose-idea">
-                <button className="cta-btn">Propose Ideas</button>
+                <button className="cta-btn">Submit Pitch</button>
               </Link>
             </motion.nav>
           )}

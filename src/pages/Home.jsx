@@ -67,9 +67,10 @@ const Home = () => {
 
             {/* CARDS */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {topSolutions.map((item) => (
-                <SolutionCard key={item._id} item={item} isAdmin={false} />
-              ))}
+              {Array.isArray(topSolutions) &&
+                topSolutions.map((item) => (
+                  <SolutionCard key={item._id} item={item} isAdmin={false} />
+                ))}
             </div>
 
             {/* VIEW ALL */}
