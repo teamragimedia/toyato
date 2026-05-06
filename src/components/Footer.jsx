@@ -24,8 +24,6 @@ const Footer = () => {
             Start your sustainability <br />
             transition today.
           </h2>
-
-          <button className="banner-btn">Get Started</button>
         </div>
       </div>
 

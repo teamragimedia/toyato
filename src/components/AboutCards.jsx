@@ -1,56 +1,78 @@
 import React from "react";
-import "../styles/AboutCards.css";
-import visionIcon from "../assets/vision-icon.png";
-import missionIcon from "../assets/mission-icon.png";
-import bgImage from "../assets/bg-pattern.png"; // your background image
+import bgImage from "../assets/bg-pattern.png";
+
+// Images
+import toyotaImage from "../assets/blue.png";
+import arthaviskaraImage from "../assets/green.png";
 
 const AboutCards = () => {
   return (
     <section
-      className="vm-section"
+      className="relative w-full bg-cover bg-center py-20 px-4 overflow-hidden"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="vm-container">
-        <div className="vm-cards">
-          {/* Vision */}
-          <div className="vm-card vm-vision">
-            <div className="vm-card-header">
-              <div className="vm-icon">
-                <img src={visionIcon} alt="Vision" />
-              </div>
-              <h3>About Toyota Tsusho</h3>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
+
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {/* Toyota Card */}
+          <div className="bg-[#dfeaf4] rounded-3xl p-10 shadow-xl transition duration-300 hover:-translate-y-2 text-center">
+            {/* Image */}
+            <div className="flex justify-center mb-8">
+              <img
+                src={toyotaImage}
+                alt="Toyota Tsusho"
+                className="w-40 h-40 object-contain"
+              />
             </div>
 
-            <p>
-              Toyota Tsusho India Private Limited (TTIPL) is the Indian arm of
-              Toyota Tsusho Corporation, a key strategic member of the globally
-              renowned Toyota Group. The company functions as the trading and
-              investment arm, with core activities spanning end-to-end supply
-              chain solutions, implementation of turnkey projects, and expansion
-              into new business domains aligned with emerging market
-              opportunities
-            </p>
+            {/* Inner Content Box */}
+            <div className="bg-[#d3e2ef] rounded-2xl p-8 flex flex-col items-center">
+              {/* Heading */}
+              <h3 className="text-3xl font-bold text-[#1d5f9f] mb-6">
+                About Toyota Tsusho
+              </h3>
 
-            <div className="vm-line"></div>
+              {/* Content */}
+              <p className="text-gray-700 text-lg leading-relaxed text-center">
+                Toyota Tsusho India Private Limited (TTIPL) is the Indian arm of
+                Toyota Tsusho Corporation, a key strategic member of the
+                globally renowned Toyota Group. The company functions as the
+                trading and investment arm, with core activities spanning
+                end-to-end supply chain solutions, implementation of turnkey
+                projects, and expansion into new business domains aligned with
+                emerging market opportunities
+              </p>
+            </div>
           </div>
 
-          {/* Mission */}
-          <div className="vm-card vm-mission">
-            <div className="vm-card-header">
-              <div className="vm-icon">
-                <img src={missionIcon} alt="Mission" />
-              </div>
-              <h3>About Arthaviskara</h3>
+          {/* Arthaviskara Card */}
+          <div className="bg-[#e4efe3] rounded-3xl p-10 shadow-xl transition duration-300 hover:-translate-y-2 text-center">
+            {/* Image */}
+            <div className="flex justify-center mb-8">
+              <img
+                src={arthaviskaraImage}
+                alt="Arthaviskara"
+                className="w-40 h-40 object-contain"
+              />
             </div>
 
-            <p>
-              Arthaviskara is the flagship engagement platform of SCD, TTIPL,
-              designed to bridge new innovation with new business by building a
-              robust ecosystem of enablers-including startups, incubators,
-              research institutions, investors, and subject-matter experts.
-            </p>
+            {/* Inner Content Box */}
+            <div className="bg-[#d8e7d7] rounded-2xl p-8 flex flex-col items-center">
+              {/* Heading */}
+              <h3 className="text-3xl font-bold text-[#42b549] mb-6">
+                About Arthaviskara
+              </h3>
 
-            <div className="vm-line"></div>
+              {/* Content */}
+              <p className="text-gray-700 text-lg leading-relaxed text-center">
+                Arthaviskara is the flagship engagement platform of SCD, TTIPL,
+                designed to bridge new innovation with new business by building
+                a robust ecosystem of enablers-including startups, incubators,
+                research institutions, investors, and subject-matter experts.
+              </p>
+            </div>
           </div>
         </div>
       </div>

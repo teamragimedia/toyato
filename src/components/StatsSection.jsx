@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import "../styles/StatsSection.css";
 import API from "../api";
 
+// ✅ Import your GIFs
+import totalGif from "../assets/totalsolution.gif";
+import completedGif from "../assets/completed.gif";
+import categoriesGif from "../assets/categories.gif";
+import sdgGif from "../assets/sdggoals.gif";
+
 const Counter = ({ end, suffix }) => {
   const [count, setCount] = useState(0);
 
@@ -48,7 +54,7 @@ const StatsSection = () => {
         // ✅ Total
         const total = solutions.length;
 
-        // ✅ Completed (change logic if needed)
+        // ✅ Completed
         const completed = solutions.filter(
           (item) => item.status === "completed",
         ).length;
@@ -79,20 +85,29 @@ const StatsSection = () => {
       suffix: "+",
       label: "Total Solutions",
       color: "#66bb6a",
+      gif: totalGif,
     },
     {
       value: stats.completed,
       suffix: "",
       label: "Completed",
       color: "#f9a825",
+      gif: completedGif,
     },
     {
       value: stats.categories,
       suffix: "",
       label: "Categories",
       color: "#00acc1",
+      gif: categoriesGif,
     },
-    { value: stats.sdgs, suffix: "", label: "SDG Goals", color: "#ef5350" },
+    {
+      value: stats.sdgs,
+      suffix: "",
+      label: "SDG Goals",
+      color: "#ef5350",
+      gif: sdgGif,
+    },
   ];
 
   return (
@@ -100,7 +115,11 @@ const StatsSection = () => {
       <div className="stats-container">
         {statsData.map((item, index) => (
           <div className="stat-card" key={index}>
+            {/* ✅ GIF Above Number */}
+            <img src={item.gif} alt={item.label} className="stat-gif" />
+
             <Counter end={item.value} suffix={item.suffix} />
+
             <p style={{ color: item.color }}>{item.label}</p>
           </div>
         ))}

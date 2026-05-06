@@ -1,13 +1,12 @@
 import React from "react";
-import "../styles/CoreTeam.css";
 
 import team1 from "../assets/team1.png";
 import team2 from "../assets/team2.png";
 import team3 from "../assets/team3.png";
 import team4 from "../assets/team4.png";
 import team5 from "../assets/team5.png";
-import team6 from "../assets/team6.png";
-import team7 from "../assets/team7.png";
+
+import teamBg from "../assets/team-bg.jpg";
 
 const teamData = [
   {
@@ -44,23 +43,42 @@ const teamData = [
 
 const CoreTeam = () => {
   return (
-    <section className="core-team">
-      <div className="container">
-        <h2 className="title">Core Team</h2>
+    <section
+      className="py-20 px-4 bg-cover bg-center"
+      style={{ backgroundImage: `url(${teamBg})` }}
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Title */}
+        <h2 className="text-4xl font-bold text-center text-[#1f4e79] mb-16">
+          Core Team
+        </h2>
 
-        <div className="team-grid">
+        {/* Team Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {teamData.map((member, index) => (
-            <div className="team-card">
-              {/* // <div
-            //   className= {`team-card ${index === 6 ? "center-card" : ""}`}
-            //   key={index}
-            // > */}
-              <div className="avatar" style={{ backgroundColor: member.color }}>
-                <img src={member.img} alt={member.name} />
+            <div
+              key={index}
+              className="bg-gray-100 rounded-2xl p-8 text-center shadow-lg hover:-translate-y-2 transition duration-300"
+            >
+              {/* Avatar */}
+              <div
+                className="w-32 h-32 rounded-full mx-auto flex items-center justify-center mb-8"
+                style={{ backgroundColor: member.color }}
+              >
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  className="w-40 h-40 rounded-full object-cover"
+                />
               </div>
 
-              <h3 className="teamh">{member.name}</h3>
-              <p className="teamy">{member.role}</p>
+              {/* Name */}
+              <h3 className="text-2xl font-semibold text-black mb-2">
+                {member.name}
+              </h3>
+
+              {/* Role */}
+              <p className="text-gray-500 text-lg">{member.role}</p>
             </div>
           ))}
         </div>

@@ -27,6 +27,7 @@ const AboutSection = () => {
         animate={{ x: ["0%", "110vw"] }}
         transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
       />
+
       <motion.img
         src={cloud4}
         className="absolute top-20 left-[-100px] w-52 opacity-70"
@@ -49,10 +50,12 @@ const AboutSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* LEFT CARD */}
-          <div className="bg-[#dce9f5] rounded-xl p-6 md:p-8 shadow-sm">
-            <img src={toyotaLogo} className="align-left mb-6 block" />
+          <div className="bg-[#dce9f5] rounded-xl p-6 md:p-8 shadow-sm text-center">
+            {/* ✅ centered image */}
+            <img src={toyotaLogo} className="mb-6 mx-auto block" alt="Toyota" />
 
-            <div className="bg-[#c9ddea] p-6 rounded-lg text-left">
+            {/* ✅ centered content */}
+            <div className="bg-[#c9ddea] p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-[#1c5d8c] mb-3">
                 About Toyota Tsusho
               </h3>
@@ -70,10 +73,16 @@ const AboutSection = () => {
           </div>
 
           {/* RIGHT CARD */}
-          <div className="bg-[#e3efe5] rounded-xl p-6 md:p-8 shadow-sm">
-            <img src={arthaLogo} className="mb-6 block" />
+          <div className="bg-[#e3efe5] rounded-xl p-6 md:p-8 shadow-sm text-center">
+            {/* ✅ centered image */}
+            <img
+              src={arthaLogo}
+              className="mb-6 mx-auto block"
+              alt="Arthaviskara"
+            />
 
-            <div className="bg-[#d7ead9] p-6 rounded-lg text-left">
+            {/* ✅ centered content */}
+            <div className="bg-[#d7ead9] p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-[#4caf50] mb-3">
                 About Arthaviskara
               </h3>
