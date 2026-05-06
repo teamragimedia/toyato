@@ -2,10 +2,11 @@ const express = require("express");
 const connectDB = require("./config/db");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+
 require("dotenv").config();
 
 const app = express();
-
+const PORT = process.env.PORT || 5000;
 // Connect DB
 connectDB();
 
@@ -31,6 +32,6 @@ app.use("/api/pitch", require("./routes/pitchRoutes"));
 app.use("/api/press", require("./routes/pressRoutes"));
 
 // Server start
-app.listen(process.env.PORT, () =>
-  console.log(`Server running on port ${process.env.PORT}`),
-);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
+});
