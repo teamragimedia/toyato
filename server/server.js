@@ -5,12 +5,13 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 
 require("dotenv").config();
-
+console.log("SERVER STARTING...");
 const app = express();
 const PORT = process.env.PORT || 5000;
 // Connect DB
 connectDB();
 
+console.log("DB CONNECTION INITIALIZED");
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
@@ -34,9 +35,11 @@ app.use("/api/press", require("./routes/pressRoutes"));
 
 app.use(express.static(path.join(__dirname, "../dist")));
 
-app.get("*", (req, res) => {
+app.get(/.*/, (req, res) => {
   res.sendFile(path.join(__dirname, "../dist/index.html"));
 });
+
+console.log("STARTING EXPRESS SERVER");
 
 // Server start
 app.listen(PORT, "0.0.0.0", () => {
