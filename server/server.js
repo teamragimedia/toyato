@@ -2,6 +2,7 @@ const express = require("express");
 const connectDB = require("./config/db");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
+const path = require("path");
 
 require("dotenv").config();
 
@@ -30,6 +31,12 @@ app.use("/api/admin", require("./routes/adminRoutes"));
 app.use("/api/solutions", require("./routes/solutionRoutes"));
 app.use("/api/pitch", require("./routes/pitchRoutes"));
 app.use("/api/press", require("./routes/pressRoutes"));
+
+app.use(express.static(path.join(__dirname, "../dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../dist/index.html"));
+});
 
 // Server start
 app.listen(PORT, "0.0.0.0", () => {
