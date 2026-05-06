@@ -1,0 +1,219 @@
+.solution-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+
+  /* ✅ IMPORTANT FIX */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.solution-card:hover {
+  transform: translateY(-6px);
+}
+
+.solutioncardhead3 {
+  font-family: "Syne", sans-serif;
+  font-size: 25px;
+  line-height: 33px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #000000;
+}
+
+.solution-card:hover {
+  transform: translateY(-6px);
+}
+
+.card-img {
+  position: relative;
+}
+
+.card-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.sdg-badges {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.sdg-badges img {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.sdg-badges img:not(:first-child) {
+  margin-top: -15px; /* overlap effect */
+}
+
+.card-body {
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* ✅ IMPORTANT */
+}
+.top-tags {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pill {
+  background: #eee;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.pill.purple {
+  background: #e9d5ff;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.section {
+  margin-top: 8px;
+}
+
+.section p {
+  font-size: 18px;
+  color: #5e5e5e;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.features span {
+  background: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.learn-btn {
+  width: 100%;
+  margin-top: auto; /* ✅ pushes button to bottom */
+  padding: 12px;
+  background: linear-gradient(145deg, #005da3, #66b64d);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ADMIN BUTTONS */
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit {
+  background: green;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.delete {
+  background: red;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  margin: 8px 0;
+}
+
+/* BASE ICON STYLE */
+.icon-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent; /* ❌ no bg */
+  border: none; /* ❌ no border */
+  color: #6b7280; /* grey default icon */
+  cursor: pointer;
+  font-size: 15px;
+  padding: 0; /* remove button feel */
+  transition: 0.2s ease;
+}
+
+/* HOVER */
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+
+/* 👍 ACTIVE */
+.icon-btn.active.like {
+  color: #2563eb; /* blue */
+}
+
+/* 👎 ACTIVE */
+.icon-btn.active.dislike {
+  color: #ef4444; /* red */
+}
+
+.reset {
+  background: #555;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+/* COLORS MATCH YOUR UI */
+
+.status.completed {
+  background: #d1f7e3;
+  color: #1b7f5c;
+}
+
+.status.collaboration {
+  background: #eee6ff;
+  color: #6b3fd1;
+}
+
+.status.ongoing {
+  background: #fff4cc;
+  color: #b58900;
+}
+
+.status.trial {
+  background: #ffe5e5;
+  color: #d32f2f;
+}

@@ -1,0 +1,118 @@
+.core-team {
+  padding: 60px 20px;
+  background: url("../assets/team-bg.jpg") no-repeat center/cover;
+  text-align: center;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1f4e79;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+}
+
+/* TOP 3 CARDS */
+.team-card:nth-child(1),
+.team-card:nth-child(2),
+.team-card:nth-child(3) {
+  grid-column: span 2;
+}
+
+/* BOTTOM 2 CARDS CENTERED */
+.team-card:nth-child(4) {
+  grid-column: 2 / 4;
+}
+
+.team-card:nth-child(5) {
+  grid-column: 4 / 6;
+}
+
+/* CARD */
+.team-card {
+  background: #e9ecef;
+  padding: 50px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+/* AVATAR */
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+
+/* TEXT */
+.team-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.team-card p {
+  font-size: 18px;
+  color: #888;
+}
+
+.team-card .teamh {
+  margin-top: 60px;
+  color: #000;
+  font-weight: 500;
+  font-size: 30.45px;
+  line-height: 36.83px;
+  letter-spacing: -0.67px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* LAST CARD CENTER */
+/* .center-card {
+  grid-column: 2 / 3;
+} */
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .center-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .center-card {
+    grid-column: span 1;
+  }
+}

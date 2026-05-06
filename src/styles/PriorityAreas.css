@@ -1,0 +1,147 @@
+/* ===== Section ===== */
+.pa-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* container */
+.pa-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+/* title */
+.pa-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1c5d8c;
+  margin-bottom: 50px;
+}
+
+/* floating house */
+.pa-house {
+  position: absolute;
+  left: -160px;
+  top: -95px;
+  z-index: 2;
+  height: 285px;
+}
+
+/* grid */
+.pa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* card */
+.pa-card {
+  background: rgba(0, 173, 216, 0.04);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+
+  border: 1px solid rgba(0, 150, 200, 0.1);
+
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.pa-card:hover {
+  transform: translateY(-5px);
+}
+
+/* icon box */
+.pa-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.pa-icon img {
+  width: 98px;
+  height: 98px;
+}
+
+/* text */
+.pa-card h3 {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.pa-card p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #6666;
+}
+
+/* ===== Responsive ===== */
+
+/* tablet */
+@media (max-width: 992px) {
+  .pa-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pa-house {
+    left: -20px;
+  }
+  .pa-section.home .pa-house {
+    top: auto;
+    right: auto;
+    left: -50px;
+    bottom: -40px;
+  }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .pa-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pa-title {
+    font-size: 24px;
+  }
+
+  .pa-house {
+    position: relative;
+    display: block;
+    margin: 0 auto 20px;
+    left: 0;
+    top: 0;
+  }
+  /* ===== HOME PAGE OVERRIDE ===== */
+  .pa-section.home .pa-house {
+    top: auto;
+    right: auto;
+    left: 0px;
+    bottom: 0px;
+  }
+}
+
+/* ===== HOME PAGE OVERRIDE ===== */
+.pa-section.home .pa-house {
+  top: auto;
+  right: auto;
+  left: -250px;
+  bottom: -90px;
+}

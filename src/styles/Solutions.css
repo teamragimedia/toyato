@@ -1,0 +1,96 @@
+/* ================= SECTION ================= */
+.solutions-section {
+  background: #f5f7f9;
+  padding: 40px 20px;
+}
+
+.solutions-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= TABS ================= */
+
+/* OUTER WRAPPER */
+.tabs-wrapper {
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+
+/* GREEN BAR */
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: linear-gradient(145deg, #005da3, #66b64d);
+  padding: 6px;
+  border-radius: 10px;
+
+  /* ✅ MOBILE FIX */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  /* optional premium look */
+  box-shadow: 0 4px 20px rgba(0, 93, 163, 0.15);
+}
+
+/* HIDE SCROLLBAR */
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* TAB BUTTON */
+.tab {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  /* ✅ KEY FIX */
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* ACTIVE TAB */
+.tab.active {
+  background: white;
+  color: #333;
+  font-weight: 500;
+}
+
+/* HOVER */
+.tab:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ================= DESKTOP ALIGN ================= */
+@media (min-width: 768px) {
+  .tabs {
+    justify-content: center;
+  }
+}
+
+/* ================= GRID ================= */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width: 768px) {
+  .solutions-section {
+    padding: 30px 15px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}

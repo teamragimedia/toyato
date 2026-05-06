@@ -1,0 +1,69 @@
+/* RESET SAFETY */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* HERO SECTION */
+.contact-hero {
+  width: 100%;
+  min-height: 60vh;
+
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  padding: 20px;
+  padding-left: 5%; /* 👈 pushes text left nicely */
+
+  position: relative;
+}
+
+/* CONTENT WRAPPER (renamed from overlay) */
+.contact-hero-content {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* TITLE */
+.contact-hero-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 8px 14px;
+
+  margin: 0;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .contact-hero {
+    min-height: 70vh;
+    padding-left: 6%;
+  }
+
+  .contact-hero-title {
+    font-size: 42px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .contact-hero {
+    min-height: 85vh;
+    padding-left: 18%;
+  }
+
+  .contact-hero-title {
+    font-size: 56px;
+  }
+}

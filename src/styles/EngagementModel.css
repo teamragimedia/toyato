@@ -1,0 +1,190 @@
+/* wrapper */
+.engagement {
+  background: #f6f9fc;
+  text-align: center;
+  position: relative;
+  padding: 120px 20px 80px;
+  overflow: hidden;
+}
+
+/* container */
+.engagement-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* title */
+.engagement-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1b5eaa;
+  margin-bottom: 50px;
+}
+
+/* cards layout */
+.engagement-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+/* card */
+.engagement-card {
+  background: #eef3f7;
+  padding: 35px 25px;
+  border-radius: 12px;
+  width: 320px;
+  max-width: 100%;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.engagement-card:hover {
+  transform: translateY(-8px);
+}
+
+/* icon */
+.icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* headings */
+.engagement-card h3 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+/* colored headings */
+.startup {
+  color: #f7931e;
+}
+.ecosystem {
+  color: #19a7ce;
+}
+.corporate {
+  color: #4caf50;
+}
+
+/* subtext */
+.startup1,
+.ecosystem1,
+.corporate1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.startup1 {
+  color: #f7931e;
+}
+.ecosystem1 {
+  color: #19a7ce;
+}
+.corporate1 {
+  color: #4caf50;
+}
+
+/* description */
+.desc {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* connector */
+.connector-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.connector-svg {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* background brush */
+.jt-brush {
+  position: absolute;
+  width: 700px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.jt-brush-bottom {
+  bottom: 0;
+  left: 0;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .engagement {
+    padding: 80px 20px;
+  }
+
+  .engagement-title {
+    font-size: 26px;
+  }
+
+  .engagement-cards {
+    gap: 20px;
+  }
+
+  .engagement-card {
+    width: 45%;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .engagement {
+    padding: 60px 15px;
+  }
+
+  .engagement-title {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .engagement-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .engagement-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .connector-wrapper {
+    display: none; /* hide curve on mobile */
+  }
+
+  .icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon img {
+    width: 50px;
+    height: 50px;
+  }
+  .jt-brush {
+    width: 300px;
+    left: 0;
+    transform: translateX(-50%);
+  }
+}

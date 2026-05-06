@@ -1,0 +1,261 @@
+.dashboard {
+  padding: 30px;
+  background: #0f172a;
+  color: white;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input {
+  padding: 10px;
+  border-radius: 8px;
+  background: #1e293b;
+  color: white;
+  border: none;
+}
+
+.form button {
+  grid-column: span 2;
+  padding: 10px;
+  background: #6366f1;
+  border: none;
+  color: white;
+  border-radius: 8px;
+}
+
+.solution-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.solution-card:hover {
+  transform: translateY(-6px);
+}
+
+/* IMAGE */
+.card-img {
+  position: relative;
+}
+
+.card-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* SDG */
+.sdg-badges {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.sdg-badges img {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+.sdg-badges img:not(:first-child) {
+  margin-top: -15px; /* overlap effect */
+}
+
+/* BODY */
+.card-body {
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* ✅ IMPORTANT */
+}
+
+.top-tags {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.pill {
+  background: #eee;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.pill.purple {
+  background: #e9d5ff;
+  color: #7c3aed;
+}
+
+h3 {
+  font-size: 25px;
+  margin: 10px 0;
+  font-family: "Syne", sans-serif;
+  color: #000;
+}
+
+/* ACTIONS */
+.actions {
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* SECTIONS */
+.section {
+  margin-top: 10px;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.section p {
+  font-size: 18px;
+  color: #5e5e5e;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.features span {
+  background: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+/* BUTTON */
+.learn-btn {
+  width: 100%;
+  margin-top: auto; /* ✅ pushes button to bottom */
+  padding: 12px;
+  background: linear-gradient(145deg, #005da3, #66b64d);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  align-items: stretch; /* ✅ equal height */
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card-actions button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card-actions button:first-child {
+  background: #10b981;
+  color: white;
+}
+
+.card-actions button:last-child {
+  background: #ef4444;
+  color: white;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  margin: 8px 0;
+}
+
+/* BASE ICON STYLE */
+.icon-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent; /* ❌ no bg */
+  border: none; /* ❌ no border */
+  color: #6b7280; /* grey default icon */
+  cursor: pointer;
+  font-size: 15px;
+  padding: 0; /* remove button feel */
+  transition: 0.2s ease;
+}
+
+/* HOVER */
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+
+/* 👍 ACTIVE */
+.icon-btn.active.like {
+  color: #2563eb; /* blue */
+}
+
+/* 👎 ACTIVE */
+.icon-btn.active.dislike {
+  color: #ef4444; /* red */
+}
+
+.reset {
+  background: #555;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.sdg-checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.sdg-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: white;
+  cursor: pointer;
+}
+
+.sdg-item input {
+  accent-color: #6366f1;
+}

@@ -1,0 +1,61 @@
+.stats-section {
+  background: #f2f2f2;
+  padding: 60px 20px;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Each block */
+.stat-card {
+  flex: 1;
+}
+
+/* Numbers */
+.stat-card h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Labels */
+.stat-card p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* COLORS (matching your UI) */
+.stat-card:nth-child(1) h2 {
+  color: #66bb6a;
+}
+
+.stat-card:nth-child(2) h2 {
+  color: #f9a825;
+}
+
+.stat-card:nth-child(3) h2 {
+  color: #00acc1;
+}
+
+.stat-card:nth-child(4) h2 {
+  color: #ef5350;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .stat-card h2 {
+    font-size: 36px;
+  }
+}

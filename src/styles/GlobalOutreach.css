@@ -1,0 +1,254 @@
+/* ================= SECTION ================= */
+
+.go-section {
+  position: relative;
+  background: #ffffff;
+  text-align: center;
+  padding: 80px 20px 0;
+  overflow: hidden;
+}
+
+/* ================= TOP RIGHT IMAGE ================= */
+
+.go-top-right {
+  position: absolute;
+  top: -50px;
+  right: -10px; /* 🔥 THIS MAKES IT TOUCH EDGE */
+  z-index: 1;
+  width: 280px;
+}
+
+/* ================= CONTENT ================= */
+
+.go-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: auto;
+}
+
+.go-content h2 {
+  font-size: 32px;
+  color: #1f4c7f;
+  margin-bottom: 10px;
+}
+
+.go-content p {
+  font-family: "syne", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 55.3px;
+  letter-spacing: -0.77px;
+  text-align: center;
+  vertical-align: middle;
+  color: #555;
+}
+
+.go-content p span {
+  font-family: "syne", sans-serif;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 24px;
+  line-height: 55.3px;
+  letter-spacing: -0.77px;
+  text-align: center;
+  vertical-align: middle;
+  color: #000;
+}
+
+.go-btn {
+  font-family: "syne", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px 22px;
+  border: none;
+  background: linear-gradient(to right, #1f8fb5, #5cb85c);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ================= GLOBE ================= */
+
+.go-globe {
+  position: relative;
+  width: 100%;
+  height: 450px;
+
+  background-image: url("../assets/globe.png");
+  background-repeat: no-repeat;
+
+  background-position: center bottom;
+
+  background-size: cover; /* 🔥 KEY CHANGE */
+}
+
+.go-globe img {
+  max-width: none;
+}
+
+/* ================= PINS ================= */
+
+.pin {
+  position: absolute;
+  width: 70px;
+  height: 66.88px;
+  transform: translate(-50%, -50%);
+}
+
+/* DESKTOP POSITIONS */
+
+.pin-1 {
+  top: 64%;
+  left: 20%;
+}
+.pin-2 {
+  top: 80%;
+  left: 35%;
+}
+.pin-3 {
+  top: 68%;
+  left: 51%;
+}
+.pin-4 {
+  top: 29%;
+  left: 60%;
+}
+.pin-5 {
+  top: 45%;
+  left: 74%;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1024px) {
+  .go-top-right {
+    width: 140px;
+  }
+
+  .pin {
+    width: 24px;
+  }
+
+  .pin-1 {
+    left: 16%;
+  }
+  .pin-2 {
+    left: 30%;
+  }
+  .pin-3 {
+    left: 50%;
+  }
+  .pin-4 {
+    left: 70%;
+  }
+  .pin-5 {
+    left: 85%;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .go-section {
+    padding: 60px 15px 0;
+  }
+
+  .go-content h2 {
+    font-size: 24px;
+  }
+
+  .go-content p {
+    font-size: 14px;
+  }
+
+  .go-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  /* TOP RIGHT IMAGE ADJUST */
+  .go-top-right {
+    width: 90px;
+    top: -10px;
+    right: -10px;
+  }
+
+  /* GLOBE BIGGER + CROPPED LOOK */
+  .go-globe {
+    margin-top: 40px;
+  }
+
+  .go-globe img {
+    max-width: none;
+    transform: translateY(20px);
+  }
+
+  /* PINS SMALLER */
+  .pin {
+    width: 18px;
+  }
+
+  /* MOBILE PIN POSITIONS (IMPORTANT) */
+  .pin-1 {
+    top: 48%;
+    left: 10%;
+  }
+  .pin-2 {
+    top: 58%;
+    left: 28%;
+  }
+  .pin-3 {
+    top: 45%;
+    left: 50%;
+  }
+  .pin-4 {
+    top: 46%;
+    left: 72%;
+  }
+  .pin-5 {
+    top: 56%;
+    left: 90%;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 768px) {
+  .go-globe {
+    height: 200px;
+
+    background-size: 140%;
+    background-position: center bottom;
+  }
+
+  .pin {
+    width: 18px;
+  }
+
+  /* adjust positions */
+  .pin-1 {
+    top: 44%;
+    left: 7%;
+  }
+  .pin-2 {
+    top: 55%;
+    left: 27%;
+  }
+  .pin-3 {
+    top: 46%;
+    left: 50%;
+  }
+  .pin-4 {
+    top: 30%;
+    left: 70%;
+  }
+  .pin-5 {
+    top: 40%;
+    left: 84%;
+  }
+}

@@ -1,0 +1,189 @@
+.incubation {
+  background: #e3e7ea;
+  padding: 33px 0;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.wrap {
+  width: 900px;
+  margin: auto;
+  position: relative;
+  height: 700px;
+}
+
+/* BIG CIRCLE */
+.big-circle {
+  position: absolute;
+  left: 0;
+  top: 200px;
+  width: 340px;
+  height: 340px;
+  background: #145f9e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.big-circle h2 {
+  font-size: 26px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+/* SVG ARC */
+.arc {
+  position: absolute;
+  left: 145px;
+  top: -144px;
+  width: 881px;
+  height: 983px;
+}
+
+/* STEP BASE */
+.step {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* DOT */
+.dot {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* COLORS */
+.green {
+  background: #63b44c;
+}
+.blue {
+  background: #1ea5c9;
+}
+.orange1 {
+  background: #f39c12;
+}
+.yellow1 {
+  background: #f5a623;
+}
+
+/* TEXT */
+.text h4 {
+  font-size: 16px;
+  color: #1c4f8b;
+  margin-bottom: 5px;
+}
+
+.text p {
+  font-size: 14px;
+  color: #333;
+  max-width: 320px;
+  line-height: 1.5;
+}
+
+/* 🔥 PRECISE POSITIONS (MATCH IMAGE CURVE) */
+.s1 {
+  top: 60px;
+  left: 420px;
+}
+.s2 {
+  top: 180px;
+  left: 500px;
+}
+.s3 {
+  top: 310px;
+  left: 520px;
+}
+.s4 {
+  top: 440px;
+  left: 480px;
+}
+.s5 {
+  top: 580px;
+  left: 400px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .wrap {
+    width: 100%;
+    height: auto;
+  }
+
+  .big-circle {
+    position: relative;
+    margin: auto;
+    top: 0;
+  }
+
+  .arc {
+    display: none;
+  }
+
+  .step {
+    position: relative;
+    margin: 30px 0;
+    left: 0 !important;
+    top: 0 !important;
+  }
+}
+
+/* Smooth rendering */
+.incubation * {
+  will-change: transform, opacity;
+}
+
+/* Floating subtle Apple feel */
+.dot {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.step:hover .dot {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Text smooth fade */
+.text h4,
+.text p {
+  transition: all 0.4s ease;
+}
+
+.step:hover .text h4 {
+  transform: translateX(4px);
+}
+
+.step:hover .text p {
+  opacity: 0.8;
+}
+
+/* Big circle subtle breathing animation */
+.big-circle {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
