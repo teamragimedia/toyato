@@ -62,6 +62,10 @@ const HomeStats = () => {
 
   return (
     <section className="bg-[#eef3f7] py-12">
+      {/*heading*/}
+      <h2 className="text-center text-3xl md:text-4xl font-bold text-[#0f4c81]">
+        Impact Sector
+      </h2>
       <div
         ref={ref}
         className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center"

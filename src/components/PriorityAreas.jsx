@@ -42,8 +42,8 @@ const data = [
     color: "#f1c40f",
   },
   {
-    title: "Innovation & Infrastructure",
-    desc: "Building resilient infrastructure",
+    title: "Economy Of Life",
+    desc: "Wisely managing resources for balanced, sustainable living.",
     icon: icon6,
     color: "#e74c3c",
   },

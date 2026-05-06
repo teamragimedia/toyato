@@ -50,7 +50,7 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {/* LEFT CARD */}
           <div className="bg-[#dce9f5] rounded-xl p-6 md:p-8 shadow-sm">
-            <img src={toyotaLogo} className="align-left mb-6 pb-10 block" />
+            <img src={toyotaLogo} className="align-left mb-6 block" />
 
             <div className="bg-[#c9ddea] p-6 rounded-lg text-left">
               <h3 className="text-xl font-semibold text-[#1c5d8c] mb-3">
@@ -71,7 +71,7 @@ const AboutSection = () => {
 
           {/* RIGHT CARD */}
           <div className="bg-[#e3efe5] rounded-xl p-6 md:p-8 shadow-sm">
-            <img src={arthaLogo} className="mb-6 pb-10 block" />
+            <img src={arthaLogo} className="mb-6 block" />
 
             <div className="bg-[#d7ead9] p-6 rounded-lg text-left">
               <h3 className="text-xl font-semibold text-[#4caf50] mb-3">
