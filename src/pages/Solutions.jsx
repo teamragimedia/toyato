@@ -27,9 +27,32 @@ const Solutions = () => {
   const fetchSolutions = async () => {
     try {
       const res = await API.get("/solutions");
-      setSolutions([...res.data]); // ✅ force new reference
+
+      console.log("FULL API RESPONSE:", res.data);
+
+      let solutionsData = [];
+
+      // Case 1: direct array
+      if (Array.isArray(res.data)) {
+        solutionsData = res.data;
+      }
+
+      // Case 2: { data: [] }
+      else if (Array.isArray(res.data.data)) {
+        solutionsData = res.data.data;
+      }
+
+      // Case 3: { solutions: [] }
+      else if (Array.isArray(res.data.solutions)) {
+        solutionsData = res.data.solutions;
+      } else {
+        console.error("Unexpected API format:", res.data);
+      }
+
+      setSolutions(solutionsData);
     } catch (err) {
-      console.log(err);
+      console.error("Fetch solutions error:", err);
+      setSolutions([]);
     }
   };
 

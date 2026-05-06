@@ -37,10 +37,25 @@ const Dashboard = () => {
     "Partnerships for the Goals",
   ];
   const [editId, setEditId] = useState(null);
-
   const fetchSolutions = async () => {
-    const res = await API.get("/solutions");
-    setSolutions(res.data);
+    try {
+      const res = await API.get("/solutions");
+
+      console.log("SOLUTIONS API RESPONSE:", res.data);
+
+      // ✅ Ensure always array
+      if (Array.isArray(res.data)) {
+        setSolutions(res.data);
+      } else if (Array.isArray(res.data.solutions)) {
+        setSolutions(res.data.solutions);
+      } else {
+        console.error("❌ API did not return array");
+        setSolutions([]);
+      }
+    } catch (err) {
+      console.error("❌ Fetch solutions error:", err);
+      setSolutions([]);
+    }
   };
 
   useEffect(() => {
@@ -200,16 +215,17 @@ const Dashboard = () => {
       </form>
 
       <div className="card-grid">
-        {solutions.map((item) => (
-          <SolutionCard
-            key={item._id}
-            item={item}
-            refresh={fetchSolutions}
-            isAdmin={true}
-            onEdit={handleEdit}
-            onDelete={handleDelete}
-          />
-        ))}
+        {Array.isArray(solutions) &&
+          solutions.map((item) => (
+            <SolutionCard
+              key={item._id}
+              item={item}
+              refresh={fetchSolutions}
+              isAdmin={true}
+              onEdit={handleEdit}
+              onDelete={handleDelete}
+            />
+          ))}
       </div>
     </div>
   );
