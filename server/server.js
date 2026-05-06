@@ -18,7 +18,10 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://lightseagreen-tarsier-455838.hostingersite.com",
+    ],
     credentials: true,
   }),
 );
