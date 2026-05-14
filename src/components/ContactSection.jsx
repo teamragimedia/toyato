@@ -10,18 +10,19 @@ const ContactSection = () => {
           <div className="contact-block">
             <h3>Location</h3>
             <p>
-              Avenida Marta Lopes, Nº2 <br />
-              8400-401 Vila Real, Bengaluru
+              Toyota Tsusho India Private Limited (TTIPL)- Plot No. 33 & 34,
+              Bidadi Industrial Area, Ramanagara Taluk & District, Karnataka -
+              562 109.
             </p>
           </div>
 
-          <div className="contact-block">
+          {/* <div className="contact-block">
             <h3>Open hours</h3>
             <p>
               Weekdays - 9:00am to 6:00pm <br />
               Weekends - Closed
             </p>
-          </div>
+          </div> */}
         </div>
 
         {/* RIGHT SIDE */}

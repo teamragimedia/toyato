@@ -44,7 +44,7 @@ const stats = [
   {
     value: 20,
     suffix: "",
-    label: "PUC conducted",
+    label: "POC conducted",
     color: "#06b6d4",
     gif: pucGif,
   },
@@ -63,8 +63,8 @@ const HomeStats = () => {
   return (
     <section className="bg-[#eef3f7] py-12">
       {/*heading*/}
-      <h2 className="text-center text-3xl md:text-4xl font-bold text-[#0f4c81]">
-        Impact Sector
+      <h2 className="text-center text-3xl md:text-4xl font-bold text-[#0f4c81] pb-9">
+        Impact Factor
       </h2>
       <div
         ref={ref}

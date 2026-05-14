@@ -3,6 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles//Navbar.css";
 import logo from "../assets/logo.svg";
+import Secondlogo from "../assets/secondlogo.png";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -23,6 +24,13 @@ const Navbar = () => {
         {/* Logo */}
         <div className="logo">
           <img src={logo} alt="Logo" />
+
+          {/* New Logo */}
+          <img
+            src={Secondlogo} // replace with your second logo import
+            alt="Second Logo"
+            className="second-logo"
+          />
         </div>
 
         {/* Hamburger */}

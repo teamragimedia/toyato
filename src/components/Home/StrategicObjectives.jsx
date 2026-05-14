@@ -48,7 +48,7 @@ const StrategicObjectives = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center text-3xl md:text-4xl font-bold text-[#1c5d8c]"
+          className="text-center text-3xl md:text-4xl font-bold text-[#1c5d8c] pb-9"
         >
           Strategic Objectives
         </motion.h2>
