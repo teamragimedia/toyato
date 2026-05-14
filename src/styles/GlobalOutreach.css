@@ -15,7 +15,7 @@
   top: -50px;
   right: -10px; /* 🔥 THIS MAKES IT TOUCH EDGE */
   z-index: 1;
-  width: 280px;
+  width: 200px;
 }
 
 /* ================= CONTENT ================= */
@@ -98,7 +98,7 @@
 
 @media (max-width: 1024px) {
   .go-top-right {
-    width: 140px;
+    width: 100px;
   }
 }
 

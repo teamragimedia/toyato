@@ -1,11 +1,11 @@
 import React from "react";
 import "../styles/Partners.css";
 
-import startupIndia from "../assets/start.png";
-import cleanTech from "../assets/clean.jpg";
-import cii from "../assets/cii.jpg";
+import startupIndia from "../assets/iitbombay.png";
+import cleanTech from "../assets/iitkanpur.png";
+import cii from "../assets/maharashthra.png";
 import iit from "../assets/iit.png";
-import tie from "../assets/tie.jpg";
+import tie from "../assets/BCKIC.png";
 import car from "../assets/ev.gif"; // top illustration
 
 const Partners = () => {

@@ -37,9 +37,9 @@
 /* FLOATING TOP RIGHT IMAGE */
 .top-illustration {
   position: absolute;
-  top: -170px;
+  top: -150px;
   right: 20px;
-  width: 300px;
+  width: 200px;
   z-index: 1;
 }
 

@@ -106,7 +106,7 @@ const EngagementServices = () => {
       <img
         src={House}
         alt="Renewable Energy"
-        className="hidden lg:block absolute right-0 bottom-0 w-60 opacity-90"
+        className="hidden lg:block absolute right-0 bottom-0 w-40 opacity-90"
       />
     </section>
   );

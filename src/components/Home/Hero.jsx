@@ -29,7 +29,7 @@ const Hero = () => {
       <motion.div
         initial={{ scale: 1.2 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 3 }}
         className="absolute inset-0"
         style={{
           backgroundImage: `url(${banner})`,
@@ -79,6 +79,7 @@ const Hero = () => {
           <motion.span
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2 }}
             className="inline-flex items-center gap-3 px-6 py-2 text-[#005DA3] rounded-full text-sm font-medium bg-white/70 backdrop-blur-xl border border-[#005DA3]/30 group cursor-pointer"
           >
             Energy Transition Leaders
@@ -89,7 +90,7 @@ const Hero = () => {
           <motion.h1
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 3 }}
             className="text-4xl sm:text-6xl font-semibold text-[#1f4e79] leading-tight mt-6 mb-6"
           >
             Start your
@@ -105,7 +106,7 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 4 }}
             className="text-gray-600 text-lg mb-8"
           >
             Supporting startups, inventors, and innovators in building scalable
@@ -115,9 +116,22 @@ const Hero = () => {
           {/* BUTTONS */}
           <div className="flex gap-4 flex-wrap">
             {/* 🔥 MAGNETIC BUTTON */}
+            <motion.MagneticButton
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 4.5 }}
+            className="text-gray-600 text-lg mb-8"
+          >
             <MagneticButton>Explore Solutions</MagneticButton>
-
+</motion.MagneticButton>
+ <motion.MagneticButton
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 4.8 }}
+            className="text-gray-600 text-lg mb-8"
+          >
             <MagneticButton secondary>Learn More</MagneticButton>
+          </motion.MagneticButton>
           </div>
         </div>
       </div>
