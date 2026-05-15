@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SolutionsHero from "../components/SolutionHero";
 import StatsSection from "../components/StatsSection";
 import SolutionCard from "../components/SolutionCard";
-import SolutionModal from "../components/SolutionModal"; // ✅ ADD THIS
+import SolutionModal from "../components/SolutionModal"; 
 import API from "../api";
 import "../styles/Solutions.css";
 import PageWrapper from "../components/PageWrapper";

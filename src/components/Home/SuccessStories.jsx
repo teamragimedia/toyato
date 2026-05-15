@@ -19,7 +19,7 @@ const Card = ({ title, color, description, stat, role }) => {
       </h3>
 
       {/* Description */}
-      <p className="text-sm text-gray-600 leading-relaxed mb-6">
+      <p className="text-sm text-gray-600 leading-relaxed mb-6 text-justify">
         {description}
       </p>
 

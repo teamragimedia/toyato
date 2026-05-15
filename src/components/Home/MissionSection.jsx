@@ -31,14 +31,14 @@ const MissionSection = () => {
             Our Mission
           </h2>
 
-          <p className="text-gray-600 mb-4 leading-relaxed">
+          <p className="text-gray-600 mb-4 leading-relaxed text-justify">
             We catalyze the energy transition by supporting innovative startups
             and organizations developing sustainable solutions across renewable
             energy, water management, waste treatment, smart mobility, and
             industrial automation.
           </p>
 
-          <p className="text-gray-600 mb-6 leading-relaxed">
+          <p className="text-gray-600 mb-6 leading-relaxed text-justify">
             Through collaboration, strategic support, and access to networks and
             expertise, we enable transformative technologies to scale and create
             lasting positive environmental impact.

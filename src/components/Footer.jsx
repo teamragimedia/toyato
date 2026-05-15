@@ -46,9 +46,10 @@ const Footer = () => {
               <FaPhoneAlt /> +91 123 456 7890
             </li>
             <li>
-              <FaMapMarkerAlt  /> Toyota Tsusho India Private Limited (TTIPL)-
-              Plot No. 33 & 34, Bidadi Industrial Area, Ramanagara Taluk &
-              District, Karnataka - 562 109.
+              <FaMapMarkerAlt /> Toyota Tsusho India Private Limited (TTIPL)-
+              <br />
+              Plot No. 33 & 34, Bidadi Industrial Area,
+             Ramanagara Taluk & District,  <br /> Karnataka - 562109.
             </li>
           </ul>
         </div>

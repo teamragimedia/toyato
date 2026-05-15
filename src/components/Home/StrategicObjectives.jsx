@@ -79,7 +79,7 @@ const StrategicObjectives = () => {
                   {item.title}
                 </h3>
 
-                <p className="text-gray-600 mt-2 text-md leading-relaxed">
+                <p className="text-gray-600 mt-2 text-md leading-relaxed text-justify">
                   {item.desc}
                 </p>
               </div>

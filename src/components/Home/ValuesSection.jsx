@@ -111,7 +111,7 @@ const ValuesSection = () => {
                 </h3>
 
                 {/* DESC */}
-                <p className="text-sm text-gray-500 leading-relaxed">
+                <p className="text-sm text-gray-500 leading-relaxed ">
                   {item.desc}
                 </p>
 

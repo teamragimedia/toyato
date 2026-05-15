@@ -14,7 +14,7 @@ const GlobalOutreach = () => {
         <h2>Global Outreach</h2>
 
         <p>
-          <span>Present across</span> 6 continents, <span>in</span> 15+
+          <span>Present across</span> 6 continents, <span>in</span> 150+
           countries
         </p>
 

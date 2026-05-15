@@ -35,7 +35,7 @@ const AboutCards = () => {
               </h3>
 
               {/* Content */}
-              <p className="text-gray-700 text-lg leading-relaxed text-center">
+              <p className="text-gray-700 text-lg leading-relaxed text-justify">
                 Toyota Tsusho India Private Limited (TTIPL) is the Indian arm of
                 Toyota Tsusho Corporation, a key strategic member of the
                 globally renowned Toyota Group. The company functions as the
@@ -66,7 +66,7 @@ const AboutCards = () => {
               </h3>
 
               {/* Content */}
-              <p className="text-gray-700 text-lg leading-relaxed text-center">
+              <p className="text-gray-700 text-lg leading-relaxed text-justify">
                 Arthaviskara is the flagship engagement platform of SCD, TTIPL,
                 designed to bridge new innovation with new business by building
                 a robust ecosystem of enablers-including startups, incubators,

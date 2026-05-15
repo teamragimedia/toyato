@@ -122,6 +122,7 @@ h3 {
 .section p {
   font-size: 18px;
   color: #5e5e5e;
+  text-align: justify;
 }
 
 /* FEATURES */
