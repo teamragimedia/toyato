@@ -198,7 +198,7 @@ h3 {
 .actions {
   display: flex;
   gap: 14px;
-  margin: 8px 0;
+  margin: 8px 15px;
 }
 
 /* BASE ICON STYLE */

@@ -120,14 +120,11 @@
 
   .pa-title {
     font-size: 24px;
+    margin-bottom: 20px;
   }
 
   .pa-house {
-    position: relative;
-    display: block;
-    margin: 0 auto 20px;
-    left: 0;
-    top: 0;
+    display: none;
   }
   /* ===== HOME PAGE OVERRIDE ===== */
   .pa-section.home .pa-house {

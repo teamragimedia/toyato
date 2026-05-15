@@ -8,7 +8,7 @@
 }
 
 .nav-container {
-  max-width: 1800px;
+  max-width: 1400px;
   margin: auto;
   padding: 15px 20px;
   display: flex;
@@ -20,7 +20,14 @@
 .logo img {
   height: 110px;
   align-items: center;
-  gap: 12px; /* spacing between logos */
+  gap: 12px !important;
+  display: inline-block; /* spacing between logos */
+}
+
+.second-logo {
+  height: 80px !important;
+  align-items: center;
+  margin-bottom: 15px !important;
 }
 
 /* NAV LINKS */
@@ -37,6 +44,12 @@
   color: #333;
   cursor: pointer;
   text-decoration: none !important;
+}
+
+/* Active nav item */
+.nav-item.active {
+  font-weight: 700; /* bold */
+  color: #111;
 }
 
 .nav-item::after {
@@ -69,9 +82,12 @@
   padding: 10px 20px;
   border: none;
   color: #fff;
-  background: linear-gradient(145deg, #005da3, #66b64d);
+  background-color: #2e8b57;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
 /* HAMBURGER */
@@ -92,7 +108,7 @@
 /* MOBILE */
 .nav-links.mobile {
   position: absolute;
-  top: 80px;
+  top: 120px;
   left: 0;
   width: 100%;
   background: #fff;

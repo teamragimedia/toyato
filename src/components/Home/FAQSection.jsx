@@ -49,7 +49,7 @@ const FAQSection = () => {
       <img
         src={CarImage} // ✅ FIXED
         alt="car"
-        className="absolute right-2 bottom-16 w-40 sm:w-56 lg:w-72 pointer-events-none"
+        className="hidden md:block absolute right-2 -bottom-20 w-40 sm:w-56 lg:w-72 pointer-events-none"
       />
 
       <div className="relative max-w-4xl mx-auto">
@@ -119,15 +119,6 @@ const FAQSection = () => {
         </div>
 
         {/* Bottom */}
-        <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4 font-syne">
-            Still have questions? We're here to help.
-          </p>
-
-          <button className="px-6 py-3 rounded-lg text-white font-medium bg-gradient-to-r from-[#005DA3] to-[#66B64D] hover:opacity-90 transition font-syne">
-            Contact Us
-          </button>
-        </div>
       </div>
     </section>
   );

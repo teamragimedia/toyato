@@ -38,7 +38,7 @@ const CommitmentSection = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-6 text-gray-600 leading-relaxed text-sm md:text-base lg:text-lg text-justify"
+          className="mt-6 text-gray-600 leading-relaxed text-sm md:text-base lg:text-lg text-justify p-8"
         >
           We are committed to democratizing clean energy solutions and making
           sustainable technology accessible to startups, inventors, and

@@ -11,74 +11,129 @@ import teamBg from "../assets/team-bg.jpg";
 const teamData = [
   {
     name: "Kazuya Fujimoto",
-    role: "Vice President",
+    role: "Co-Founder & CEO",
+    dept: "Strategy & Vision",
     img: team1,
-    color: "#f7931e",
+
+    linkedin: "https://linkedin.com",
   },
   {
     name: "Lokesha T",
-    role: "Associate Vice President",
+    role: "Chief Strategy Officer",
+    dept: "Business Development",
     img: team3,
-    color: "#5cb85c",
+
+    linkedin: "https://linkedin.com",
   },
   {
     name: "Jasmer Singh",
-    role: "Deputy General Manager",
+    role: "Head of Operations",
+    dept: "Execution & Growth",
     img: team2,
-    color: "#17a2b8",
+
+    linkedin: "https://linkedin.com",
   },
   {
     name: "Srikanta Patra",
     role: "Manager",
+    dept: "Domain",
     img: team5,
-    color: "#e0e0e0",
+
+    linkedin: "https://linkedin.com",
   },
   {
     name: "Nithin Vishwanath",
     role: "Assistant Manager",
+    dept: "Domain",
     img: team4,
-    color: "#e6cfd2",
+
+    linkedin: "https://linkedin.com",
   },
 ];
 
 const CoreTeam = () => {
   return (
     <section
-      className="py-20 px-4 bg-cover bg-center"
-      style={{ backgroundImage: `url(${teamBg})` }}
+      className="py-20 px-5 bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${teamBg})`,
+      }}
     >
       <div className="max-w-7xl mx-auto">
-        {/* Title */}
-        <h2 className="text-4xl font-bold text-center text-[#1f4e79] mb-16">
-          Core Team
-        </h2>
+        {/* Header */}
+        <div className="text-center mb-14">
+          <h2 className="text-3xl font-bold text-[#1f4e79] mt-2">Core Team</h2>
+        
 
-        {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="w-20 h-[2px] bg-gray-300 mx-auto mt-6"></div>
+        </div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
           {teamData.map((member, index) => (
             <div
               key={index}
-              className="bg-gray-100 rounded-2xl p-8 text-center shadow-lg hover:-translate-y-2 transition duration-300"
+              className={`
+                bg-gray-100 rounded-2xl p-8 text-center
+                shadow-lg hover:-translate-y-2
+                transition duration-300
+
+                ${index < 3 ? "md:col-span-2" : ""}
+                ${index === 3 ? "md:col-start-2 md:col-span-2" : ""}
+                ${index === 4 ? "md:col-start-4 md:col-span-2" : ""}
+              `}
             >
-              {/* Avatar */}
+              {/* Avatar Box */}
               <div
-                className="w-32 h-32 rounded-full mx-auto flex items-center justify-center mb-8"
-                style={{ backgroundColor: member.color }}
+                className="w-24 h-24 rounded-2xl mx-auto
+                flex items-center justify-center mb-6"
+                style={{
+                  backgroundColor: member.color,
+                }}
               >
                 <img
                   src={member.img}
                   alt={member.name}
-                  className="w-40 h-40 rounded-full object-cover"
+                  className="w-28 h-28 rounded-full object-cover"
                 />
               </div>
 
               {/* Name */}
-              <h3 className="text-2xl font-semibold text-black mb-2">
-                {member.name}
-              </h3>
+              <h3 className="font-bold text-xl text-black">{member.name}</h3>
 
               {/* Role */}
-              <p className="text-gray-500 text-lg">{member.role}</p>
+              <p className="text-[#1f4e79] mt-2 font-medium">{member.role}</p>
+
+              {/* Department */}
+              <p className="text-gray-500 text-sm">{member.dept}</p>
+
+              {/* Divider + LinkedIn */}
+              {/* Divider + LinkedIn */}
+              <div className="mt-6">
+                <div className="w-full h-[1.5px] bg-gray-400 mb-4"></div>
+
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="
+      flex items-center
+      justify-center
+      gap-2
+      text-sm
+      no-underline
+      text-gray-600
+      hover:text-blue-600
+    "
+                >
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                    alt="linkedin"
+                    className="w-4 h-4"
+                  />
+                  LinkedIn
+                </a>
+              </div>
             </div>
           ))}
         </div>

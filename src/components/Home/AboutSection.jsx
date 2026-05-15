@@ -37,14 +37,14 @@ const AboutSection = () => {
 
       <motion.img
         src={cloud3}
-        className="absolute bottom-10 left-[-150px] w-36 opacity-60"
+        className="absolute bottom-10 left-[-150px] w-36 opacity-60 z-[99]"
         animate={{ x: ["0%", "110vw"] }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
       />
 
       {/* ===== CONTENT ===== */}
       <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1c5d8c] mb-12 pb-9">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1c5d8c] mb-8 pb-9">
           About us
         </h2>
 

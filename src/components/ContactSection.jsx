@@ -16,13 +16,18 @@ const ContactSection = () => {
             </p>
           </div>
 
-          {/* <div className="contact-block">
-            <h3>Open hours</h3>
-            <p>
-              Weekdays - 9:00am to 6:00pm <br />
-              Weekends - Closed
-            </p>
-          </div> */}
+          <div className="contact-block">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4615.428815968971!2d77.42242827572117!3d12.78219351900137!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae461f320c044d%3A0x4194e06710983ca6!2sTOYOTA%20TSUSHO%20INDIA%20PRIVATE%20LIMITED!5e1!3m2!1sen!2sin!4v1778759275511!5m2!1sen!2sin"
+              width="100%"
+              height="330"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Toyota Tsusho India Location"
+            />
+          </div>
         </div>
 
         {/* RIGHT SIDE */}

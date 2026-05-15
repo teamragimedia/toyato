@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Footer.css";
 
-import bannerImg from "../assets/footer-banner.png";
+import bannerImg from "../assets/footer-banner.jpeg";
 import logo from "../assets/footer-logo.png";
 
 import {
@@ -48,8 +48,8 @@ const Footer = () => {
             <li>
               <FaMapMarkerAlt /> Toyota Tsusho India Private Limited (TTIPL)-
               <br />
-              Plot No. 33 & 34, Bidadi Industrial Area,
-             Ramanagara Taluk & District,  <br /> Karnataka - 562109.
+              Plot No. 33 & 34, Bidadi Industrial Area, Ramanagara Taluk &
+              District, <br /> Karnataka - 562109.
             </li>
           </ul>
         </div>

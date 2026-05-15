@@ -52,12 +52,12 @@ export default function FeaturedStories() {
       {/* 🔥 CAROUSEL */}
       <div
         ref={scrollRef}
-        className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar px-2"
+        className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar px-2 whitespace-nowrap"
       >
         {data.map((item) => (
           <div
             key={item._id}
-            className="flex-shrink-0 w-full sm:w-[48%] md:w-[32%] lg:w-[30%] bg-white rounded-xl shadow hover:shadow-lg transition"
+            className="flex-shrink-0 inline-block w-[85%] sm:w-[48%] md:w-[32%] lg:w-[30%] bg-white rounded-xl shadow hover:shadow-lg transition"
           >
             <img
               src={`http://localhost:5000/uploads/${item.image}`}

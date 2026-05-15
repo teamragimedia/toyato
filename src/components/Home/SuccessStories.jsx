@@ -42,11 +42,11 @@ const SuccessStories = () => {
       style={{ backgroundColor: "#fff" }}
     >
       {/* Right Top Illustration */}
-      <img
-        src={[Blub]} // replace with your image path
-        alt="bulb"
-        className="absolute top-0 right-0 w-40 sm:w-52 lg:w-64 opacity-100 pointer-events-none"
-      />
+     <img
+  src={Blub}
+  alt="bulb"
+  className="hidden md:block absolute top-0 right-0 w-40 sm:w-52 lg:w-50 opacity-100 pointer-events-none"
+/>
 
       <div className="max-w-6xl mx-auto">
         {/* Heading */}

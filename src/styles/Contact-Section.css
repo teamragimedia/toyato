@@ -117,12 +117,13 @@
 
 /* BUTTON */
 .send-btn {
-  background: linear-gradient(90deg, #1f5f9b, #3bb273);
+  background-color: #2e8b57;
   color: #fff;
   border: none;
   padding: 12px 30px;
   cursor: pointer;
   font-size: 14px;
+  border-radius: 5%;
 }
 
 /* TABLET */

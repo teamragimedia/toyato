@@ -3,7 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles//Navbar.css";
 import logo from "../assets/logo.svg";
-import Secondlogo from "../assets/secondlogo.png";
+import Secondlogo from "../assets/secondlogo.svg";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -50,12 +50,16 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <nav className="nav-links desktop">
           {navItems.map((item) => (
-            <NavLink key={item.path} to={item.path} end>
+            <NavLink
+              key={item.path}
+              to={item.path}
+              end
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               {({ isActive }) => (
-                <div className="nav-item">
+                <div className={`nav-item ${isActive ? "active" : ""}`}>
                   {item.name}
 
-                  {/* Animated underline */}
                   {isActive && (
                     <motion.div
                       layoutId="underline"
@@ -65,7 +69,6 @@ const Navbar = () => {
                         stiffness: 400,
                         damping: 30,
                       }}
-                      whileHover={{ scale: 1.05 }}
                     />
                   )}
                 </div>
