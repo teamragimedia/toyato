@@ -6,7 +6,7 @@ import team3 from "../assets/team3.png";
 import team4 from "../assets/team4.png";
 import team5 from "../assets/team5.png";
 
-import teamBg from "../assets/team-bg.jpg";
+import teamBg from "../assets/team-bg.jpeg";
 
 const teamData = [
   {
@@ -63,7 +63,6 @@ const CoreTeam = () => {
         {/* Header */}
         <div className="text-center mb-14">
           <h2 className="text-3xl font-bold text-[#1f4e79] mt-2">Core Team</h2>
-        
 
           <div className="w-20 h-[2px] bg-gray-300 mx-auto mt-6"></div>
         </div>
@@ -94,7 +93,7 @@ const CoreTeam = () => {
                 <img
                   src={member.img}
                   alt={member.name}
-                  className="w-28 h-28 rounded-full object-cover"
+                  className="w-28 h-28 object-cover"
                 />
               </div>
 
