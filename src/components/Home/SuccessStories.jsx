@@ -42,11 +42,11 @@ const SuccessStories = () => {
       style={{ backgroundColor: "#fff" }}
     >
       {/* Right Top Illustration */}
-     <img
-  src={Blub}
-  alt="bulb"
-  className="hidden md:block absolute top-0 right-0 w-40 sm:w-52 lg:w-50 opacity-100 pointer-events-none"
-/>
+      <img
+        src={Blub}
+        alt="bulb"
+        className="hidden md:block absolute top-0 right-0 w-40 sm:w-52 lg:w-50 opacity-100 pointer-events-none"
+      />
 
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
@@ -63,17 +63,17 @@ const SuccessStories = () => {
         {/* Cards */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <Card
-            title="Solar Startup Success"
+            title="High performance Filter"
             color="#4CAF50"
-            description="Arth Avishkara’s Solar Performance Engine increased our efficiency by 23% and helped us scale operations across three states."
+            description="Successful  Deployment at TTKA  in Thailand with  Mileage Improvement of 5 %"
             stat="23% Efficiency Gain"
             role="CEO, Renewable Tech Startup"
           />
 
           <Card
-            title="EV Charging Network"
+            title="Carbon capture "
             color="#FF3B30"
-            description="Their EV charging infrastructure solution helped us deploy 500+ charging stations with intelligent grid management."
+            description="Implemented India’s First Gas to Solid Chemistry  in CCUS of capacity 10 TPD  at a Power Plant in India "
             stat="500+ Stations Deployed"
             role="Founder, E-Mobility Solutions"
           />

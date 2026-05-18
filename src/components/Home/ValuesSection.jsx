@@ -69,7 +69,7 @@ const ValuesSection = () => {
           className="text-gray-500 mt-3 max-w-2xl mx-auto"
         >
           The principles and strategic focus that guide our mission to
-          accelerate the global energy transition
+          accelerate the global sustainability transition
         </motion.p>
 
         {/* CARDS */}

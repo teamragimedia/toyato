@@ -40,11 +40,12 @@ const CommitmentSection = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 text-gray-600 leading-relaxed text-sm md:text-base lg:text-lg text-justify p-8"
         >
-          We are committed to democratizing clean energy solutions and making
-          sustainable technology accessible to startups, inventors, and
-          enterprises worldwide. Through innovation, collaboration, and
+          We are committed to democratizing clean solutions and making
+          sustainable technology accessible to enterprises worldwide and
+          translate research and innovation from startup and Research hubs to
+          real time Implementation . Through innovation, collaboration, and
           unwavering focus on environmental impact, we accelerate the global
-          transition to clean energy and circular economy practices.
+          transition to Carbon Neutrality and Circular Economy practices.
         </motion.p>
       </div>
     </section>

@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
-import banner from "../../assets/banner.png";
+import banner from "../../assets/herobanner.gif";
 import { FiArrowRight } from "react-icons/fi";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const sectionRef = useRef(null);
@@ -47,7 +48,23 @@ const Hero = () => {
       />
 
       {/* 🔥 GRADIENT FADE */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#f6f8fb] via-[#f6f8fb]/90 to-transparent" />
+      {/* 🔥 GRADIENT FADE */}
+      <motion.div
+        initial={{
+          opacity: 0,
+          x: -100,
+        }}
+        animate={{
+          opacity: 1,
+          x: 0,
+        }}
+        transition={{
+          duration: 2,
+          delay: 4,
+          ease: "easeOut",
+        }}
+        className="absolute inset-0 bg-gradient-to-r from-[#f6f8fb] via-[#f6f8fb]/90 to-transparent"
+      />
 
       {/* 🔥 FLOATING PARTICLES */}
       {[...Array(6)].map((_, i) => (
@@ -70,7 +87,7 @@ const Hero = () => {
       ))}
 
       {/* 🔥 NOISE OVERLAY (SUPER PREMIUM) */}
-      <div className="absolute inset-0 opacity-[0.05] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+      {/* <div className="absolute inset-0 opacity-[0.05] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" /> */}
 
       {/* CONTENT */}
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12 w-full">
@@ -79,10 +96,10 @@ const Hero = () => {
           <motion.span
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2 }}
+            transition={{ delay: 4 }}
             className="inline-flex items-center gap-3 px-6 py-2 text-[#005DA3] rounded-full text-sm font-medium bg-white/70 backdrop-blur-xl border border-[#005DA3]/30 group cursor-pointer"
           >
-            Energy Transition Leaders
+            Live the core-Lead the change
             <FiArrowRight className="group-hover:translate-x-2 transition" />
           </motion.span>
 
@@ -90,7 +107,7 @@ const Hero = () => {
           <motion.h1
             initial={{ opacity: 0, y: 80 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 3 }}
+            transition={{ delay: 5 }}
             className="text-4xl sm:text-6xl font-semibold text-[#1f4e79] leading-tight mt-6 mb-6"
           >
             Start your
@@ -106,32 +123,37 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 4 }}
+            transition={{ delay: 6 }}
             className="text-gray-600 text-lg mb-8"
           >
-            Supporting startups, inventors, and innovators in building scalable
-            solutions for a sustainable future.
+            Empowering startups, corporations, and research hubs to build
+            sustainable solutions through adoption, collaboration, and
+            co-creation for a greener future.
           </motion.p>
 
           {/* BUTTONS */}
           <div className="flex gap-4 flex-wrap">
             {/* 🔥 MAGNETIC BUTTON */}
-            <motion.MagneticButton
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 4.5 }}
-            className="text-gray-600 text-lg mb-8"
-          >
-            <MagneticButton>Explore Solutions</MagneticButton>
-</motion.MagneticButton>
- <motion.MagneticButton
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 4.8 }}
-            className="text-gray-600 text-lg mb-8"
-          >
-            <MagneticButton secondary>Learn More</MagneticButton>
-          </motion.MagneticButton>
+            <Link to="/solutions">
+              <motion.MagneticButton
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 6.5 }}
+                className="text-gray-600 text-lg mb-8"
+              >
+                <MagneticButton>Explore Solutions</MagneticButton>
+              </motion.MagneticButton>
+            </Link>
+            <Link to="/about">
+              <motion.MagneticButton
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 6.8 }}
+                className="text-gray-600  text-lg mb-8"
+              >
+                <MagneticButton secondary>Learn More</MagneticButton>
+              </motion.MagneticButton>
+            </Link>
           </div>
         </div>
       </div>
@@ -167,8 +189,8 @@ const MagneticButton = ({ children, secondary }) => {
       whileTap={{ scale: 0.95 }}
       className={`px-6 py-3 rounded-md shadow-lg transition ${
         secondary
-          ? "bg-blue-600 text-white"
-          : "text-white bg-gradient-to-r from-[#005da3] to-[#66b64d]"
+          ? "bg-[#005DA3] text-white"
+          : "text-white bg-[#2e8b57] hover:bg-[#2e8b57]/90"
       }`}
     >
       {children}

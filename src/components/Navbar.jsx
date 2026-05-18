@@ -23,14 +23,14 @@ const Navbar = () => {
       <div className="nav-container">
         {/* Logo */}
         <div className="logo">
-          <img src={logo} alt="Logo" />
-
-          {/* New Logo */}
           <img
             src={Secondlogo} // replace with your second logo import
             alt="Second Logo"
             className="second-logo"
           />
+          <img src={logo} alt="Logo" />
+
+          {/* New Logo */}
         </div>
 
         {/* Hamburger */}

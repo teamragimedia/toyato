@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLeaf, FaTint, FaWrench, FaArrowUp } from "react-icons/fa";
+
+import Startup from "../../assets/startupicon.gif";
+import Corporation from "../../assets/corporation.gif";
+import Research from "../../assets/research.gif";
+import Government from "../../assets/government.gif";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -32,17 +36,23 @@ const MissionSection = () => {
           </h2>
 
           <p className="text-gray-600 mb-4 leading-relaxed text-justify">
-            We catalyze the energy transition by supporting innovative startups
-            and organizations developing sustainable solutions across renewable
-            energy, water management, waste treatment, smart mobility, and
-            industrial automation.
+            We catalyze sustainability by supporting innovative startups,
+            corporation, and research hubs in developing scalable solutions for
+            a more sustainable future.
           </p>
 
-          <p className="text-gray-600 mb-6 leading-relaxed text-justify">
-            Through collaboration, strategic support, and access to networks and
-            expertise, we enable transformative technologies to scale and create
-            lasting positive environmental impact.
-          </p>
+          <ul className="list-disc list-outside pl-6 text-gray-600 mb-6 leading-relaxed text-justify space-y-3">
+            <li>
+              Our focus areas include mobility, resources and environment, and
+              life and consumer solutions.
+            </li>
+
+            <li>
+              Through collaboration, strategic support, and access to networks
+              and expertise, we help transformative technologies scale and
+              create lasting positive environmental impact.
+            </li>
+          </ul>
 
           {/* BUTTON */}
           <motion.button
@@ -59,26 +69,26 @@ const MissionSection = () => {
         <div className="flex-1 grid grid-cols-2 gap-5">
           {[
             {
-              icon: <FaLeaf />,
-              title: "Renewable Energy",
+              icon: Startup,
+              title: "Startup",
               bg: "bg-[#f5e9d8]",
               color: "text-[#f39c12]",
             },
             {
-              icon: <FaTint />,
-              title: "Water Management",
+              icon: Corporation,
+              title: "Corporation",
               bg: "bg-[#e3efe5]",
               color: "text-[#4caf50]",
             },
             {
-              icon: <FaWrench />,
-              title: "Industrial Tech",
+              icon: Research,
+              title: "Research Hubs ",
               bg: "bg-[#dce9f5]",
               color: "text-[#1f5fa8]",
             },
             {
-              icon: <FaArrowUp />,
-              title: "Smart Mobility",
+              icon: Government,
+              title: "Government institution",
               bg: "bg-[#f5dede]",
               color: "text-[#e74c3c]",
             },
@@ -99,9 +109,13 @@ const MissionSection = () => {
             >
               <motion.div
                 whileHover={{ rotate: 10, scale: 1.2 }}
-                className={`${item.color} text-2xl mb-2`}
+                className="mb-3"
               >
-                {item.icon}
+                <img
+                  src={item.icon}
+                  alt={item.title}
+                  className="w-14 h-14 object-contain"
+                />
               </motion.div>
 
               <p className={`text-lg font-medium ${item.color}`}>

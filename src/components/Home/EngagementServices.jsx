@@ -11,7 +11,7 @@ const services = [
   {
     img: Collaboration,
     title: "Collaboration Engagement",
-    desc: "Partner with us on innovative clean tech solutions",
+    desc: "Partner with us for innovative technology solutions",
     color: "text-green-600",
     linkColor: "text-green-600",
     bg: "bg-green-100",
@@ -19,7 +19,7 @@ const services = [
   {
     img: Engagement,
     title: "Engagement Model",
-    desc: "Flexible frameworks tailored to your startup's needs",
+    desc: "Flexible frameworks tailored to your requirements ",
     color: "text-blue-600",
     linkColor: "text-blue-600",
     bg: "bg-blue-100",
@@ -27,7 +27,7 @@ const services = [
   {
     img: Corporate,
     title: "Corporate Solution",
-    desc: "Enterprise support for organizations scaling impact",
+    desc: "Decarbonization support for organizations scaling impact ",
     color: "text-[#FDB714]",
     linkColor: "text-[#FDB714]",
     bg: "bg-yellow-100",

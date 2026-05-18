@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/PriorityAreas.css";
+import bgImage from "../assets/bg1.jpeg";
 
 // ICONS
 import icon1 from "../assets/Circular Economy.gif";
@@ -51,7 +52,12 @@ const data = [
 
 const PriorityAreas = ({ variant = "about", image }) => {
   return (
-    <section className={`pa-section ${variant}`}>
+    <section
+      className={`pa-section ${variant}`}
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
+    >
       <div className="pa-container">
         <h2 className="pa-title pb-9">Priority Areas</h2>
 
