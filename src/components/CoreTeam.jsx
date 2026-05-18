@@ -11,42 +11,32 @@ import teamBg from "../assets/team-bg.jpeg";
 const teamData = [
   {
     name: "Kazuya Fujimoto",
-    role: "Co-Founder & CEO",
-    dept: "Strategy & Vision",
+    role: "Vice President",
     img: team1,
-
     linkedin: "https://linkedin.com",
   },
   {
     name: "Lokesha T",
-    role: "Chief Strategy Officer",
-    dept: "Business Development",
+    role: "Associate Vice President",
     img: team3,
-
     linkedin: "https://linkedin.com",
   },
   {
     name: "Jasmer Singh",
-    role: "Head of Operations",
-    dept: "Execution & Growth",
+    role: "Deputy General Manager",
     img: team2,
-
     linkedin: "https://linkedin.com",
   },
   {
     name: "Srikanta Patra",
     role: "Manager",
-    dept: "Domain",
     img: team5,
-
     linkedin: "https://linkedin.com",
   },
   {
     name: "Nithin Vishwanath",
     role: "Assistant Manager",
-    dept: "Domain",
     img: team4,
-
     linkedin: "https://linkedin.com",
   },
 ];
