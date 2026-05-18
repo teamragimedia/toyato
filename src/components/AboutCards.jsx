@@ -2,7 +2,7 @@ import React from "react";
 import bgImage from "../assets/bg-pattern.png";
 
 // Images
-import toyotaImage from "../assets/blue.png";
+import toyotaImage from "../assets/secondlogo.svg";
 import arthaviskaraImage from "../assets/green.png";
 
 const AboutCards = () => {
@@ -18,13 +18,17 @@ const AboutCards = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Toyota Card */}
           <div className="bg-[#dfeaf4] rounded-3xl p-10 shadow-xl transition duration-300 hover:-translate-y-2 text-center">
-            {/* Image */}
-            <div className="flex justify-center mb-8">
+            {/* Logo + Title */}
+            <div className="flex flex-col items-center mb-8">
               <img
                 src={toyotaImage}
                 alt="Toyota Tsusho"
-                className="w-40 h-40 object-contain"
+                className="w-40 object-contain"
               />
+
+              <h3 className="text-2xl font-bold text-[#1d5f9f] mt-4">
+                Toyota Tsusho India
+              </h3>
             </div>
 
             {/* Inner Content Box */}

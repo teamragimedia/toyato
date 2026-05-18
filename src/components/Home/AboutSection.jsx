@@ -6,7 +6,7 @@ import cloud2 from "../../assets/cloud2.png";
 import cloud3 from "../../assets/cloud1.png";
 import cloud4 from "../../assets/cloud1.png";
 
-import toyotaLogo from "../../assets/blue.png";
+import toyotaLogo from "../../assets/secondlogo.svg";
 import arthaLogo from "../../assets/green.png";
 
 const AboutSection = () => {
@@ -52,7 +52,10 @@ const AboutSection = () => {
           {/* LEFT CARD */}
           <div className="bg-[#dce9f5] rounded-xl p-6 md:p-8 shadow-sm text-center">
             {/* ✅ centered image */}
-            <img src={toyotaLogo} className="mb-6 mx-auto block" alt="Toyota" />
+            <img src={toyotaLogo} className="mx-auto block w-40" alt="Toyota" />
+            <h3 className="text-xl font-semibold text-[#1c5d8c] mb-3">
+              Toyota Tsusho India
+            </h3>
 
             {/* ✅ centered content */}
             <div className="bg-[#c9ddea] p-6 rounded-lg text-center">
