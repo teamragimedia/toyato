@@ -78,7 +78,7 @@ const Home = () => {
               <a
                 href="/solutions"
                 className="px-6 py-3 text-white no-underline rounded-md
-    bg-[linear-gradient(145deg,#005da3,#66b64d)] inline-block"
+    bg-[#2e8b57] inline-block"
               >
                 View All Solutions
               </a>

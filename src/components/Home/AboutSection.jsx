@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import cloud1 from "../../assets/cloud1.png";
 import cloud2 from "../../assets/cloud2.png";
@@ -68,10 +69,11 @@ const AboutSection = () => {
                 Toyota Tsusho Corporation, a key strategic member of the
                 globally renowned Toyota Group.
               </p>
-
-              <p className="mt-4 text-[#1c5d8c] text-sm font-medium cursor-pointer">
-                Read more →
-              </p>
+              <Link to="/about" className="no-underline">
+                <p className="mt-4 text-[#1c5d8c] text-sm font-medium cursor-pointer">
+                  Read more →
+                </p>
+              </Link>
             </div>
           </div>
 
@@ -95,10 +97,11 @@ const AboutSection = () => {
                 designed to bridge new innovation with new business by building
                 a robust ecosystem of enablers.
               </p>
-
-              <p className="mt-4 text-[#4caf50] text-sm font-medium cursor-pointer">
-                Read more →
-              </p>
+              <Link to="/about" className="no-underline">
+                <p className="mt-4 text-[#1c5d8c] text-sm font-medium cursor-pointer">
+                  Read more →
+                </p>
+              </Link>
             </div>
           </div>
         </div>

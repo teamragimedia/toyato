@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import Startup from "../../assets/startupicon.gif";
 import Corporation from "../../assets/corporation.gif";
@@ -55,14 +56,16 @@ const MissionSection = () => {
           </ul>
 
           {/* BUTTON */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 text-white rounded-md shadow-lg
-            bg-[linear-gradient(145deg,#005da3,#66b64d)]"
-          >
-            Join Our Community
-          </motion.button>
+          <Link to="/propose-idea">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 py-3 text-white rounded-md shadow-lg
+            bg-[#2e8b57] hover:bg-[#1a5276] transition mouse-pointer"
+            >
+              Join Our Community
+            </motion.button>
+          </Link>
         </motion.div>
 
         {/* RIGHT GRID */}

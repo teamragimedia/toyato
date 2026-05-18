@@ -1,5 +1,6 @@
 import React from "react";
 import { FiArrowRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -16,10 +17,13 @@ const CTASection = () => {
         </p>
 
         {/* Button */}
-        <button className="inline-flex items-center gap-2 px-6 py-3 rounded-md text-white font-medium bg-gradient-to-r from-[#005DA3] to-[#66B64D] hover:opacity-90 transition duration-300">
+       <Link to="/contact">
+        <button className="inline-flex items-center gap-2 px-6 py-3 rounded-md text-white font-medium bg-[#2e8b57] hover:opacity-90 transition duration-300">
           Contact us
           <FiArrowRight size={18} />
         </button>
+       </Link>
+
       </div>
     </section>
   );

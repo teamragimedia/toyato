@@ -229,7 +229,7 @@ const HomeStats = () => {
 
             {/* Counter */}
             <h2
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold"
+              className="text-[24px] sm:text-4xl lg:text-3xl font-bold"
               style={{ color: item.color }}
             >
               {inView ? (

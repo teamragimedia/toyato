@@ -118,7 +118,7 @@
   width: 100%;
   margin-top: auto; /* ✅ pushes button to bottom */
   padding: 12px;
-  background: linear-gradient(145deg, #005da3, #66b64d);
+  background: #2e8b57;
   border: none;
   color: white;
   border-radius: 6px;

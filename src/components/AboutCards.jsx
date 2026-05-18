@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../assets/bg-pattern.png";
+import bgImage from "../assets/bg-pattern.jpeg";
 
 // Images
 import toyotaImage from "../assets/secondlogo.svg";
@@ -8,7 +8,7 @@ import arthaviskaraImage from "../assets/green.png";
 const AboutCards = () => {
   return (
     <section
-      className="relative w-full bg-cover bg-center py-20 px-4 overflow-hidden"
+      className="relative w-full bg-cover absolute inset-0 bg-white/40 bg-center py-20 px-4 overflow-hidden"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Overlay */}

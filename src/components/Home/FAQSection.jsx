@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiPlus, FiX } from "react-icons/fi";
-import Background from "../../assets/background.png";
+import Background from "../../assets/faq.jpeg";
 import CarImage from "../../assets/ev.gif";
 
 const faqs = [
@@ -42,7 +42,7 @@ const FAQSection = () => {
       <img
         src={Background} // ✅ FIXED
         alt="bg"
-        className="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover bg-white/90 pointer-events-none"
       />
 
       {/* Car Image */}
@@ -56,7 +56,7 @@ const FAQSection = () => {
         {/* Heading */}
         <div className="flex items-center gap-3 mb-10">
           <div className="border-2 border-[#66B64D] p-2 rounded-sm">
-            <span className="text-[#005DA3] font-bold">?</span>
+            <span className="text-[#005DA3] font-bold"></span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-semibold text-[#005DA3]">

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bgimage from "../../assets/bg-pattern.png"; // optional background image
+import bgimage from "../../assets/bg-pattern.jpeg"; // optional background image
 
 const objectives = [
   {
@@ -35,10 +35,10 @@ const objectives = [
 
 const StrategicObjectives = () => {
   return (
-    <section className="relative bg-[#f5f7f9] pb-28 pt-28 overflow-hidden">
+    <section className="relative pb-28 pt-28 overflow-hidden">
       {/* LIGHT BACKGROUND IMAGE */}
       <div
-        className="absolute inset-0 opacity-10 bg-center bg-cover"
+        className="absolute inset-0 bg-white/90 bg-center bg-cover"
         style={{ backgroundImage: `url(${bgimage})` }} // optional
       />
 
