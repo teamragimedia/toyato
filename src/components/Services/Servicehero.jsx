@@ -1,5 +1,5 @@
 import React from "react";
-import serviceImg from "../../assets/serviceibg.png";
+import serviceImg from "../../assets/servicebanner.gif"; // replace with your image
 
 const Servicehero = () => {
   return (

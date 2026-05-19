@@ -52,7 +52,7 @@ const AboutCards = () => {
           </div>
 
           {/* Arthaviskara Card */}
-          <div className="bg-[#e4efe3] rounded-3xl p-10 shadow-xl transition duration-300 hover:-translate-y-2 text-center">
+          <div className="bg-[url('assets/arthaviskara.jpeg')]  bg-cover bg-center rounded-3xl p-10 shadow-xl transition duration-300 hover:-translate-y-2 text-center">
             {/* Image */}
             <div className="flex justify-center mb-8">
               <img
