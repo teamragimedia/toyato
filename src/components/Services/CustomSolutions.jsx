@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import carImg from "../../assets/ev.gif"; // replace with your image
 
 const CustomSolutions = () => {
@@ -17,14 +18,16 @@ const CustomSolutions = () => {
         </p>
 
         {/* Button */}
-        <button
-          className="mt-8 px-8 py-3 rounded-md text-white font-medium
-          bg-gradient-to-r from-[#1b5e7a] to-[#3aa46b]
-          hover:scale-105 transition-all duration-300 flex items-center gap-2 mx-auto"
-        >
-          Contact us
-          <span className="text-lg">→</span>
-        </button>
+        <Link to="/contact" className="no-underline">
+          <button
+            className="mt-8 px-8 py-3 rounded-md text-white font-medium
+            bg-gradient-to-r from-[#1b5e7a] to-[#3aa46b]
+            hover:scale-105 transition-all duration-300 flex items-center gap-2 mx-auto"
+          >
+            Contact us
+            <span className="text-lg">→</span>
+          </button>
+        </Link>
       </div>
 
       {/* RIGHT IMAGE */}

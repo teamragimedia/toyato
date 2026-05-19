@@ -51,7 +51,7 @@ const JourneyTimeline = () => {
       <img src={brushTop} className="jt-brush jt-brush-top" alt="" />
       <img src={brushBottom} className="jt-brush jt-brush-bottom" alt="" />
 
-      <h2 className="jt-title">Growth Timeline</h2>
+      <h2 className="jt-title mb-9">Growth Timeline</h2>
 
       <div className="jt-timeline">
         {steps.map((step, i) => (

@@ -81,7 +81,7 @@ function Card({ item }) {
         flex h-full w-full flex-col items-center
         rounded-[18px]
         border border-[#B9E1F7]
-        bg-[#F4FAFD]
+        bg-[#e0e7cd]
         px-5 py-7 sm:px-6 sm:py-8
         text-center
         transition-all duration-300
@@ -151,7 +151,7 @@ export default function EngagementProcess() {
           </h2>
 
           <p className="mt-3 text-[14px] text-[#707070] sm:text-[15px] lg:text-[16px]">
-            8 criteria for eA streamlined approach to delivering hydrogen
+            7 criteria for eA streamlined approach to delivering hydrogen
             solutionsvaluation
           </p>
         </div>

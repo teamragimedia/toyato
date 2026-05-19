@@ -6,7 +6,7 @@ import team3 from "../assets/team3.png";
 import team4 from "../assets/team4.png";
 import team5 from "../assets/team5.png";
 
-import teamBg from "../assets/team-bg.jpeg";
+import teamBg from "../assets/core.jpeg";
 
 const teamData = [
   {

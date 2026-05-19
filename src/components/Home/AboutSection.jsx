@@ -55,7 +55,7 @@ const AboutSection = () => {
             {/* ✅ centered image */}
             <img src={toyotaLogo} className="mx-auto block w-40" alt="Toyota" />
             <h3 className="text-xl font-semibold text-[#1c5d8c] mb-3">
-              Toyota Tsusho India
+              Toyota Tsusho
             </h3>
 
             {/* ✅ centered content */}

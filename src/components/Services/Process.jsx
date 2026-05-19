@@ -205,7 +205,7 @@ function Card({ step, delay, go }) {
 
       {/* LABEL */}
       <p
-        className="whitespace-pre-line text-center text-[13px] font-semibold leading-snug sm:text-[14px]"
+        className="whitespace-pre-line text-center text-[18px] font-semibold leading-snug sm:text-[18px]"
         style={{ color: step.labelColor }}
       >
         {step.label}

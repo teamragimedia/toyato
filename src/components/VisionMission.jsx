@@ -2,20 +2,19 @@ import React from "react";
 
 import visionIcon from "../assets/vision-icon.png";
 import missionIcon from "../assets/mission-icon.png";
-import bgImage from "../assets/bg.jpg";
+import bgImage from "../assets/vision.jpeg";
 
 const VisionMission = () => {
   return (
     <section
       className="relative w-full bg-cover bg-center py-20 px-4 overflow-hidden"
-      style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-black mb-16">
           Vision & Mission
         </h2>
 

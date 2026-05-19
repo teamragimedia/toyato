@@ -17,7 +17,7 @@ const AboutCards = () => {
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Toyota Card */}
-          <div className="bg-[#dfeaf4] rounded-3xl p-10 shadow-xl transition duration-300 hover:-translate-y-2 text-center">
+          <div className="bg-[url('assets/toyato.jpeg')]  bg-cover bg-center rounded-3xl p-10 shadow-xl transition duration-300 hover:-translate-y-2 text-center">
             {/* Logo + Title */}
             <div className="flex flex-col items-center mb-8">
               <img
@@ -27,7 +27,7 @@ const AboutCards = () => {
               />
 
               <h3 className="text-2xl font-bold text-[#1d5f9f] mt-4">
-                Toyota Tsusho India
+                Toyota Tsusho
               </h3>
             </div>
 

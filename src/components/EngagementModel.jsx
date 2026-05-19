@@ -32,7 +32,7 @@ const EngagementModel = () => {
             <div className="icon">
               <img src={icon2} alt="Ecosystem" />
             </div>
-            <h3 className="ecosystem">Ecosystem Innobiz A2oZ</h3>
+            <h3 className="ecosystem">Incubation Hub A2oZ</h3>
             <p className="ecosystem1">Ecosystem Connect</p>
             <p className="desc">
               Connect ecosystem experts for inclusive innovation
