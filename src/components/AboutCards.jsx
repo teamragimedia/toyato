@@ -26,7 +26,7 @@ const AboutCards = () => {
                 className="w-40 object-contain"
               />
 
-              <h3 className="text-2xl font-bold text-[#1d5f9f] mt-4">
+              <h3 className="text-2xl font-bold text-[#000] mt-4">
                 Toyota Tsusho
               </h3>
             </div>

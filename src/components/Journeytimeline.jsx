@@ -75,6 +75,9 @@ const JourneyTimeline = () => {
         {/* ROCKET */}
         <div className="jt-step step-4 jt-rocket-step">
           <span className="jt-side side-4"></span>
+          <div className="jt-rocket">
+            <h2 className="text-black align-center"> MISSION GLOBAL</h2>
+          </div>
 
           <div className="jt-rocket-content">
             <img src={rocket} alt="rocket" />

@@ -129,7 +129,7 @@
 
   .jt-rocket-content {
     position: absolute;
-    bottom: 60px;
+    bottom: 90px;
     left: 100%;
     transform: translateX(-50%);
   }
@@ -260,4 +260,13 @@
 .jt-brush-bottom {
   bottom: 0;
   left: 0;
+}
+
+.jt-rocket {
+  position: absolute;
+  bottom: 50px;
+  left: 100%;
+  transform: translateX(-50%);
+  width: 210px;
+  font-weight: 600 !important;
 }

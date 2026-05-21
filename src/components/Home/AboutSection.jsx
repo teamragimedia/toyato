@@ -54,7 +54,7 @@ const AboutSection = () => {
           <div className="bg-[#dce9f5] rounded-xl p-6 md:p-8 shadow-sm text-center">
             {/* ✅ centered image */}
             <img src={toyotaLogo} className="mx-auto block w-40" alt="Toyota" />
-            <h3 className="text-xl font-semibold text-[#1c5d8c] mb-3">
+            <h3 className="text-xl font-semibold text-[#000] mb-3">
               Toyota Tsusho
             </h3>
 

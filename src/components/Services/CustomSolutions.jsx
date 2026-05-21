@@ -21,7 +21,7 @@ const CustomSolutions = () => {
         <Link to="/contact" className="no-underline">
           <button
             className="mt-8 px-8 py-3 rounded-md text-white font-medium
-            bg-gradient-to-r from-[#1b5e7a] to-[#3aa46b]
+            bg-[#2e8b57]
             hover:scale-105 transition-all duration-300 flex items-center gap-2 mx-auto"
           >
             Contact us
