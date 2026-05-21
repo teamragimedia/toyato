@@ -34,8 +34,8 @@ const Footer = () => {
           <img src={logo} alt="logo" className="footer-logo" />
 
           <p>
-            Pioneering the future of clean energy through innovative hydrogen
-            fuel cell technology. Building a sustainable tomorrow, today.
+            Driving the clean-tech transition through innovation, collaboration,
+            and co-creation—building a better tomorrow for future generations.
           </p>
 
           <ul className="contact">
@@ -83,7 +83,7 @@ const Footer = () => {
 
       {/* BOTTOM */}
       <div className="footer-bottom">
-        <p>© 2026 Arth Aviskara. All rights reserved.</p>
+        <p>© 2026 Arth Aviskara. All rights reserved. Designed By</p>
 
         <div className="social-icons">
           <FaLinkedin />

@@ -71,10 +71,14 @@ const AboutCards = () => {
 
               {/* Content */}
               <p className="text-gray-700 text-lg leading-relaxed text-justify">
-                Arthaviskara is the flagship engagement platform of SCD, TTIPL,
-                designed to bridge new innovation with new business by building
-                a robust ecosystem of enablers-including startups, incubators,
-                research institutions, investors, and subject-matter experts.
+                Arthaviskara is the flagship innovation engagement platform of
+                the Strategic Creation Division (SCD) at TTIPL, designed to
+                seamlessly bridge emerging innovations with scalable business
+                opportunities. It acts as a dynamic interface between
+                cutting-edge technologies and real-world industrial challenges,
+                enabling the conversion of innovative ideas into impactful
+                business solutions. The platform fosters a collaborative and
+                future-ready ecosystem
               </p>
             </div>
           </div>

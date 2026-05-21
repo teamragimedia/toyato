@@ -51,7 +51,7 @@ const AboutSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* LEFT CARD */}
-          <div className="bg-[#dce9f5] rounded-xl p-6 md:p-8 shadow-sm text-center">
+          <div className="bg-[url('assets/toyato.jpeg')]  bg-cover bg-center rounded-xl p-6 md:p-8 shadow-sm text-center">
             {/* ✅ centered image */}
             <img src={toyotaLogo} className="mx-auto block w-40" alt="Toyota" />
             <h3 className="text-xl font-semibold text-[#000] mb-3">
@@ -78,7 +78,7 @@ const AboutSection = () => {
           </div>
 
           {/* RIGHT CARD */}
-          <div className="bg-[#e3efe5] rounded-xl p-6 md:p-8 shadow-sm text-center">
+          <div className="bg-[url('assets/arthaviskara.jpeg')]  bg-cover bg-center rounded-xl p-6 md:p-8 shadow-sm text-center">
             {/* ✅ centered image */}
             <img
               src={arthaLogo}

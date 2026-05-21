@@ -11,7 +11,7 @@ const navItems = [
   { name: "Solutions", path: "/solutions" },
   { name: "Services", path: "/services" },
   { name: "Press Release", path: "/press" },
-  { name: "Resources", path: "/resources" },
+  { name: "DecarbonX", path: "/DecarbonX" },
   { name: "Contact", path: "/contact" },
 ];
 
