@@ -42,7 +42,7 @@ const StrategicObjectives = () => {
         style={{ backgroundImage: `url(${bgimage})` }} // optional
       />
 
-      <div className="max-w-6xl mx-auto relative z-10 p-8">
+      <div className="max-w-6xl mx-auto relative z-10 p-8 bg-[#47ad3221] rounded-3xl">
         {/* TITLE */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

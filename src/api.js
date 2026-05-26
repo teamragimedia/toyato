@@ -6,7 +6,7 @@ const API = axios.create({
       ? "http://localhost:5000/api"
       : "/api",
 
-  withCredentials: true,
+  // withCredentials: true,
 });
 
 export default API;

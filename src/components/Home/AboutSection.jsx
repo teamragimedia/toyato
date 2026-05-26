@@ -51,7 +51,7 @@ const AboutSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* LEFT CARD */}
-          <div className="bg-[url('assets/toyato.jpeg')]  bg-cover bg-center rounded-xl p-6 md:p-8 shadow-sm text-center">
+          <div className="bg-[url('assets/toyato.jpeg')]  bg-cover  rounded-xl p-6 md:p-8 shadow-sm text-center">
             {/* ✅ centered image */}
             <img src={toyotaLogo} className="mx-auto block w-40" alt="Toyota" />
             <h3 className="text-xl font-semibold text-[#000] mb-3">
@@ -69,7 +69,7 @@ const AboutSection = () => {
                 Toyota Tsusho Corporation, a key strategic member of the
                 globally renowned Toyota Group.
               </p>
-              <Link to="/about" className="no-underline">
+              <Link to="/about#arthaviskara" className="no-underline">
                 <p className="mt-4 text-[#1c5d8c] text-sm font-medium cursor-pointer">
                   Read more →
                 </p>
@@ -82,7 +82,7 @@ const AboutSection = () => {
             {/* ✅ centered image */}
             <img
               src={arthaLogo}
-              className="mb-6 mx-auto block"
+              className="mb-6 w-[25%] mx-auto block"
               alt="Arthaviskara"
             />
 
@@ -97,7 +97,7 @@ const AboutSection = () => {
                 designed to bridge new innovation with new business by building
                 a robust ecosystem of enablers.
               </p>
-              <Link to="/about" className="no-underline">
+              <Link to="/about#arthaviskara" className="no-underline">
                 <p className="mt-4 text-[#1c5d8c] text-sm font-medium cursor-pointer">
                   Read more →
                 </p>

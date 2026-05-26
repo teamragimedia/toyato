@@ -128,14 +128,14 @@ const SafeCountUp = CountUp?.default || CountUp;
 
 const stats = [
   {
-    value: 3000,
+    value: 20,
     suffix: "+",
-    label: "Idea proposals received",
+    label: "Corporate Problem statement",
     color: "#6bbf59",
     gif: ideaGif,
   },
   {
-    value: 1100,
+    value: 1800,
     suffix: "+",
     label: "Ideas evaluated",
     color: "#f59e0b",

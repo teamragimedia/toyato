@@ -135,14 +135,14 @@ const Hero = () => {
           <div className="flex gap-4 flex-wrap">
             {/* 🔥 MAGNETIC BUTTON */}
             <Link to="/solutions">
-              <motion.MagneticButton
+              <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 6.5 }}
                 className="text-gray-600 text-lg mb-8"
               >
                 <MagneticButton>Explore Solutions</MagneticButton>
-              </motion.MagneticButton>
+              </motion.div>
             </Link>
             <Link to="/about">
               <motion.MagneticButton

@@ -1,3 +1,6 @@
+console.log("SERVER FILE:", __filename);
+console.log("DIR:", __dirname);
+
 const express = require("express");
 const connectDB = require("./config/db");
 const cors = require("cors");
@@ -8,6 +11,18 @@ require("dotenv").config();
 console.log("SERVER STARTING...");
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5174",
+
+      "https://lightseagreen-tarsier-455838.hostingersite.com",
+    ],
+    credentials: true,
+  }),
+);
 // Connect DB
 connectDB();
 
@@ -16,18 +31,13 @@ console.log("DB CONNECTION INITIALIZED");
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",
-      "https://lightseagreen-tarsier-455838.hostingersite.com",
-    ],
-    credentials: true,
-  }),
-);
-
 // Static uploads
 app.use("/uploads", express.static("uploads"));
+
+app.use((req, res, next) => {
+  console.log("REQ:", req.method, req.url);
+  next();
+});
 
 // Routes
 app.use("/api/auth", require("./routes/authRoutes"));
@@ -36,11 +46,11 @@ app.use("/api/solutions", require("./routes/solutionRoutes"));
 app.use("/api/pitch", require("./routes/pitchRoutes"));
 app.use("/api/press", require("./routes/pressRoutes"));
 
-app.use(express.static(path.join(__dirname, "../dist")));
+// app.use(express.static(path.join(__dirname, "../dist")));
 
-app.get(/^\/(?!api).*/, (req, res) => {
-  res.sendFile(path.join(__dirname, "../dist/index.html"));
-});
+// app.get(/^\/(?!api).*/, (req, res) => {
+//   res.sendFile(path.join(__dirname, "../dist/index.html"));
+// });
 
 console.log("STARTING EXPRESS SERVER");
 

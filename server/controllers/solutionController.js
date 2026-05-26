@@ -11,8 +11,16 @@ const parseSafe = (data) => {
 
 // GET
 const getSolutions = async (req, res) => {
-  const data = await Solution.find();
-  res.json(data);
+  try {
+    console.log("GET SOLUTIONS HIT");
+
+    const data = await Solution.find();
+
+    res.json(data);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 };
 
 // CREATE

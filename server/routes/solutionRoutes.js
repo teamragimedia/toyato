@@ -1,14 +1,18 @@
+console.log("solutionRoutes loaded");
+
 const express = require("express");
 const router = express.Router();
 const ctrl = require("../controllers/solutionController");
 const upload = require("../middleware/upload");
+
+// specific routes first
+router.get("/stats", ctrl.getStats);
 
 // CRUD
 router.get("/", ctrl.getSolutions);
 router.post("/", upload.single("image"), ctrl.createSolution);
 router.put("/:id", upload.single("image"), ctrl.updateSolution);
 router.delete("/:id", ctrl.deleteSolution);
-router.get("/stats", ctrl.getStats);
 
 // actions
 router.patch("/:id/like", ctrl.likeSolution);

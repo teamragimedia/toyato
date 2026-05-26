@@ -40,10 +40,10 @@ const Footer = () => {
 
           <ul className="contact">
             <li>
-              <FaEnvelope /> info@arthaviskara.com
+              <FaEnvelope /> Arthaviskara@ttipl.co.in   
             </li>
             <li>
-              <FaPhoneAlt /> +91 123 456 7890
+              <FaPhoneAlt /> 080 40823143
             </li>
             <li>
               <FaMapMarkerAlt /> Toyota Tsusho India Private Limited (TTIPL)-

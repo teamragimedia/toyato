@@ -13,7 +13,7 @@ const steps = [
   {
     year: "2018",
     title: "FOUNDING YEAR",
-    points: ["500+ Startups Evaluated"],
+    points: ["10+ Proposals"],
     icon: icon2018,
     color: "orange",
   },
@@ -39,7 +39,7 @@ const steps = [
   {
     year: "2025",
     title: "GLOBAL REACH",
-    points: ["3+ Overseas Collaborations", "10+ Total POCs"],
+    points: ["Connected with 15+ Partners"],
     icon: icon2025,
     color: "yellow",
   },
@@ -76,7 +76,7 @@ const JourneyTimeline = () => {
         <div className="jt-step step-4 jt-rocket-step">
           <span className="jt-side side-4"></span>
           <div className="jt-rocket">
-            <h2 className="text-black align-center"> MISSION GLOBAL</h2>
+            <h2 className="text-black align-center"> MARKET LEADER</h2>
           </div>
 
           <div className="jt-rocket-content">

@@ -10,6 +10,7 @@ const AboutCards = () => {
     <section
       className="relative w-full bg-cover absolute inset-0 bg-white/40 bg-center py-20 px-4 overflow-hidden"
       style={{ backgroundImage: `url(${bgImage})` }}
+      id="arthaviskara"
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
