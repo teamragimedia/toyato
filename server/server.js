@@ -46,11 +46,11 @@ app.use("/api/solutions", require("./routes/solutionRoutes"));
 app.use("/api/pitch", require("./routes/pitchRoutes"));
 app.use("/api/press", require("./routes/pressRoutes"));
 
-// app.use(express.static(path.join(__dirname, "../dist")));
+app.use(express.static(path.join(__dirname, "../dist")));
 
-// app.get(/^\/(?!api).*/, (req, res) => {
-//   res.sendFile(path.join(__dirname, "../dist/index.html"));
-// });
+app.get(/^\/(?!api).*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "../dist/index.html"));
+});
 
 console.log("STARTING EXPRESS SERVER");
 
