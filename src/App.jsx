@@ -15,6 +15,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Services from "./pages/Services";
 import AdminPanel from "./pages/AdminPanel"; // ✅ CORRECT
 import Press from "./pages/Press";
+import CookieConsent from "./components/CookieConsent";
 
 function Layout() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function Layout() {
 
   return (
     <>
+      <CookieConsent />
       {!isAdminPage && <Navbar />}
       <ScrollToTop />
 

@@ -40,7 +40,7 @@ const Footer = () => {
 
           <ul className="contact">
             <li>
-              <FaEnvelope /> Arthaviskara@ttipl.co.in   
+              <FaEnvelope /> Arthaviskara@ttipl.co.in
             </li>
             <li>
               <FaPhoneAlt /> 080 40823143
@@ -76,7 +76,7 @@ const Footer = () => {
             <h4>Legal</h4>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-            <a href="#">Cookie Policy</a>
+            <a href="/cookieConsent">Cookie Policy</a>
           </div>
         </div>
       </div>

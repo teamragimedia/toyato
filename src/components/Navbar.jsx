@@ -3,7 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles//Navbar.css";
 import logo from "../assets/logo.svg";
-import Secondlogo from "../assets/secondlogo.svg";
+import Secondlogo from "../assets/secondlogo.png";
 
 const navItems = [
   { name: "Home", path: "/" },
