@@ -48,7 +48,7 @@ export default function CookieConsent() {
               onClick={() => setShowModal(true)}
               className="px-4 py-2 border rounded-lg text-sm"
             >
-              Less Information
+              More Information
             </button>
 
             <button
