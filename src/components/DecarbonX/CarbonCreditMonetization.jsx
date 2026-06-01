@@ -1,23 +1,26 @@
 import { motion } from "framer-motion";
-import { FileCheck, ScrollText, MonitorSmartphone, Globe } from "lucide-react";
+import Mrv from "../../assets/MRV.gif";
+import Identification from "../../assets/Identification.gif";
+import CarbonCredit from "../../assets/CarbonCredit.gif";
+import MarketLinkage from "../../assets/CarbonMarket.gif";
 
 import carbonCreditImage from "../../assets/carbon-credit.png";
 
 const services = [
   {
-    icon: FileCheck,
+    icon: Identification,
     title: "Identification of Eligible Carbon Projects",
   },
   {
-    icon: ScrollText,
+    icon: CarbonCredit,
     title: "Carbon Credit Generation Strategy",
   },
   {
-    icon: MonitorSmartphone,
+    icon: Mrv,
     title: "MRV (Monitoring, Reporting, Verification) Support",
   },
   {
-    icon: Globe,
+    icon: MarketLinkage,
     title: "Carbon Market Linkage (Voluntary / Compliance)",
   },
 ];
@@ -133,8 +136,6 @@ export default function CarbonCreditMonetization() {
             <div className="p-6 lg:p-10">
               <div className="grid md:grid-cols-2 gap-6">
                 {services.map((item, index) => {
-                  const Icon = item.icon;
-
                   return (
                     <motion.div
                       key={index}
@@ -149,51 +150,52 @@ export default function CarbonCreditMonetization() {
                         y: -8,
                       }}
                       className="
-                        bg-green-100
-                        rounded-[24px]
-                        border
-                        border-[#E5EAE7]
-                        p-8
-                        text-center
-                        flex
-                        flex-col
-                        items-center
-                        justify-center
-                        min-h-[250px]
-                        shadow-sm
-                        hover:shadow-xl
-                        transition-all
-                        duration-300
-                      "
+          bg-green-100
+          rounded-[24px]
+          border
+          border-[#E5EAE7]
+          p-8
+          text-center
+          flex
+          flex-col
+          items-center
+          justify-center
+          min-h-[250px]
+          shadow-sm
+          hover:shadow-xl
+          transition-all
+          duration-300
+        "
                     >
                       <div
                         className="
-                          w-24
-                          h-24
-                          rounded-full
-                          bg-[#F7FAF8]
-                          border
-                          border-[#E5EAE7]
-                          flex
-                          items-center
-                          justify-center
-                          mb-6
-                        "
+            w-24
+            h-24
+            rounded-full
+            bg-[#F7FAF8]
+            border
+            border-[#E5EAE7]
+            flex
+            items-center
+            justify-center
+            mb-6
+            overflow-hidden
+          "
                       >
-                        <Icon
-                          size={42}
-                          className="text-[#79A96B]"
-                          strokeWidth={1.5}
+                        <img
+                          src={item.icon}
+                          alt={item.title}
+                          className="w-16 h-16 object-contain"
                         />
                       </div>
 
                       <h3
                         className="
-                          text-[#294D43]
-                          font-semibold
-                          leading-8
-                          text-lg
-                        "
+            text-[#294D43]
+            font-semibold
+            leading-8
+            text-lg
+          "
                       >
                         {item.title}
                       </h3>
