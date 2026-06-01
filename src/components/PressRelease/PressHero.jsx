@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import banners from "../../assets/proposeidea.png";
+import banners from "../../assets/press123.gif";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 const Hero = () => {
@@ -74,7 +74,7 @@ const Hero = () => {
             className="text-3xl sm:text-4xl md:text-6xl font-semibold text-[#1f4e79] leading-tight mb-4"
           >
             <span className="bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">
-              Press Room
+            
             </span>
           </motion.h1>
 
@@ -85,7 +85,7 @@ const Hero = () => {
             transition={{ delay: 0.4 }}
             className="text-gray-600 text-base sm:text-lg mb-6"
           >
-            Read the latest news
+          
           </motion.p>
         </div>
       </div>

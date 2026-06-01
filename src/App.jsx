@@ -15,6 +15,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Services from "./pages/Services";
 import AdminPanel from "./pages/AdminPanel"; // ✅ CORRECT
 import Press from "./pages/Press";
+import Decarbon from "./pages/DecarbonX";
 import CookieConsent from "./components/CookieConsent";
 
 function Layout() {
@@ -37,7 +38,7 @@ function Layout() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/propose-idea" element={<ProposeIdea />} />
           <Route path="/press" element={<Press />} />
-
+          <Route path="/decarbonx" element={<Decarbon />} />
           {/* Admin */}
           <Route path="/admin/login" element={<AdminLogin />} />
 

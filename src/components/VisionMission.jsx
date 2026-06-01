@@ -1,14 +1,12 @@
 import React from "react";
 
-import visionIcon from "../assets/vision-icon.png";
-import missionIcon from "../assets/mission-icon.png";
+import visionIcon from "../assets/vision123.gif";
+import missionIcon from "../assets/mission123.gif";
 import bgImage from "../assets/vision.jpeg";
 
 const VisionMission = () => {
   return (
-    <section
-      className="relative w-full bg-cover bg-center py-20 px-4 overflow-hidden"
-    >
+    <section className="relative w-full bg-cover bg-center py-20 px-4 overflow-hidden">
       {/* Dark Overlay */}
       <div className="absolute inset-0"></div>
 

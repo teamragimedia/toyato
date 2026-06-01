@@ -61,10 +61,8 @@ const PriorityAreas = ({ variant = "about", image }) => {
       <div className="pa-container">
         <h2 className="pa-title pb-9">Priority Areas</h2>
 
-        {/* IMAGE */}
         {image && <img src={image} alt="decor" className="pa-house" />}
 
-        {/* GRID */}
         <div className="pa-grid">
           {data.map((item, index) => (
             <div className="pa-card" key={index}>

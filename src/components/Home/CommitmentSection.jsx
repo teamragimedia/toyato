@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import brushLeft from "../../assets/brush-blue.png"; // your blue brush
-import brushRight from "../../assets/brush-green.png"; // your green brush
+import brushLeft from "../../assets/arthaa.png"; // your blue brush
 
 const CommitmentSection = () => {
   return (
@@ -11,15 +10,15 @@ const CommitmentSection = () => {
       <img
         src={brushLeft}
         alt="brush"
-        className="absolute left-0 bottom-0 w-80 md:w-70  lg:w-[500px]  pointer-events-none"
+        className="absolute left-0 top-0 w-80 md:w-70  lg:w-[500px]  pointer-events-none"
       />
 
       {/* RIGHT BRUSH */}
-      <img
+      {/* <img
         src={brushRight}
         alt="brush"
         className="absolute right-0 top-0 w-80 md:w-70 lg:w-[500px]  rotate-180  pointer-events-none"
-      />
+      /> */}
 
       {/* CONTENT */}
       <div className="max-w-4xl mx-auto text-center relative z-10">
