@@ -248,11 +248,11 @@ function ProposeIdea() {
       className="min-h-screen bg-cover bg-center flex items-center justify-center px-4 md:px-10"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:w-1/2  bg-white/90 p-10 md:p-10 border border-red-600 rounded-lg shadow-lg ">
         {/* START */}
         {step === 0 && (
           <>
-            <h1 className="text-2xl md:text-3xl font-semibold text-blue-700 mb-4">
+            <h1 className="text-2xl md:text-3xl font-semibold text-[#005CA2] mb-4">
               Share your pitch with Arthaviskara
             </h1>
 
@@ -263,7 +263,7 @@ function ProposeIdea() {
 
             <button
               onClick={handleNext}
-              className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-2 rounded w-full md:w-auto"
+              className="bg-[#2e8b57] text-white px-6 py-2 rounded w-full md:w-auto"
             >
               Start
             </button>
@@ -272,8 +272,8 @@ function ProposeIdea() {
 
         {/* QUESTIONS */}
         {step > 0 && step <= questions.length && (
-          <div className="p-4 md:p-6 max-w-lg bg-white/90 rounded-lg shadow-md">
-            <h2 className="text-lg md:text-xl font-semibold text-blue-700 mb-4">
+          <div className="p-4 md:p-6 max-w-lg">
+            <h2 className="text-lg md:text-xl font-semibold text-[#005CA2] mb-4">
               {step}. {currentQ.question}
             </h2>
 
@@ -337,7 +337,7 @@ function ProposeIdea() {
 
             <button
               onClick={handleNext}
-              className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-6 py-2 rounded w-full md:w-auto"
+              className="bg-[#2e8b57] text-white px-6 py-2 rounded w-full md:w-auto"
             >
               {step === questions.length ? "Submit" : "Next"}
             </button>

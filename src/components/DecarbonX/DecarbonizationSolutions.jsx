@@ -48,9 +48,16 @@ const orbitItems = [
 
 export default function DecarbonizationSolutions() {
   return (
-    <section className="py-20 px-5 bg-white">
-      <div className="max-w-[1800px] mx-auto">
-        <div className="bg-[#F7F8F7] rounded-[24px] border border-[#ECEFEC] p-6 md:p-10 lg:p-14">
+    <section className="py-20 px-5 ">
+      <div className="max-w-[1800px] bg-[url('assets/decarbonx1.jpeg')]  bg-contain bg-left mx-auto">
+        <div
+          className="  bg-[#F7F8F7]/50
+            rounded-[28px]
+            border
+            border-[#E8ECEA]
+            overflow-hidden
+            p-6 md:p-10"
+        >
           {/* LEFT + RIGHT */}
           <div className="grid lg:grid-cols-[430px_1fr] gap-12">
             {/* LEFT SIDE */}
@@ -141,9 +148,9 @@ export default function DecarbonizationSolutions() {
                       delay: index * 0.1,
                     }}
                     viewport={{ once: true }}
-                    className="bg-white rounded-2xl border border-[#E6ECE8] p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+                    className="bg-[#fff] rounded-2xl border border-[#E6ECE8] p-6 shadow-sm hover:shadow-lg transition-all duration-300"
                   >
-                    <CheckCircle2 size={24} className="text-[#72AF61] mb-4" />
+                    <CheckCircle2 size={24} className="text-[#72AF61] mb-0" />
 
                     <h4 className="font-semibold text-[#275E4B] text-lg mb-3">
                       {item.title}
@@ -166,9 +173,9 @@ export default function DecarbonizationSolutions() {
                       delay: index * 0.1,
                     }}
                     viewport={{ once: true }}
-                    className="bg-white rounded-2xl border border-[#E6ECE8] p-6 shadow-sm hover:shadow-lg transition-all duration-300 w-full md:w-[calc(50%-12px)] xl:w-[31%]"
+                    className="bg-[#fff] rounded-2xl border border-[#E6ECE8] p-6 shadow-sm hover:shadow-lg transition-all duration-300 w-full md:w-[calc(50%-12px)] xl:w-[31%]"
                   >
-                    <CheckCircle2 size={24} className="text-[#72AF61] mb-4" />
+                    <CheckCircle2 size={24} className="text-[#72AF61] mb-0" />
 
                     <h4 className="font-semibold text-[#275E4B] text-lg mb-3">
                       {item.title}
@@ -181,23 +188,42 @@ export default function DecarbonizationSolutions() {
 
               {/* RESULT CARD */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  delay: 0.4,
+                }}
                 viewport={{ once: true }}
-                className="bg-[#F1F6F2] rounded-[24px] p-10 text-center mt-8"
+                className="
+                  mt-6
+                  bg-[#EEF5EF]
+                  border
+                  border-[#E1ECE3]
+                  rounded-2xl
+                  p-5
+                  flex
+                  items-center
+                  justify-center
+                  gap-4
+                "
               >
-                <div className="flex justify-center mb-6">
-                  <Leaf size={60} className="text-[#72AF61]" />
-                </div>
-
-                <h4 className="font-bold text-[#285E4C] text-2xl mb-4">
-                  The Result
-                </h4>
-
-                <p className="text-[#617067] leading-8 max-w-3xl mx-auto">
-                  A practical decarbonization roadmap that balances technical
-                  viability, cost, and measured emissions reduction.
+                <p
+                  className="
+                    text-center
+                    font-semibold
+                    text-[#2A5E4B]
+                    text-lg
+                  "
+                >
+                  <span className="font-bold">The Result:</span> A practical
+                  decarbonization roadmap that balances technical viability,
+                  cost, and measured emissions reduction.
                 </p>
               </motion.div>
             </div>

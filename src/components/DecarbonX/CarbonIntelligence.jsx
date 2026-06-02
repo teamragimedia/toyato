@@ -64,7 +64,7 @@ export default function CarbonIntelligence() {
               key={index}
               className="group bg-green-50 border border-[#E4ECE7] rounded-3xl p-8 hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
             >
-              <div className="w-16 h-16 rounded-2xl bg-[#EEF6F2] flex items-center justify-center mb-6 overflow-hidden">
+              <div className="w-16 h-16 rounded-2xl  flex items-center justify-center mb-6 overflow-hidden">
                 <img
                   src={item.icon}
                   alt={item.title}

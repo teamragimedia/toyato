@@ -140,3 +140,33 @@
     display: none;
   }
 }
+
+.pa-cyclist {
+  position: absolute;
+  bottom: -90px;
+  left: -250px;
+  width: 100px;
+  z-index: 10;
+
+  animation: cycleRide 15s linear infinite;
+}
+
+@keyframes cycleRide {
+  from {
+    left: -250px;
+  }
+
+  to {
+    left: calc(100% + 250px);
+  }
+}
+
+@keyframes cycleBounce {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-6px);
+  }
+}

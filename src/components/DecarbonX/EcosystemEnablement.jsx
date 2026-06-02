@@ -1,24 +1,28 @@
 import { motion } from "framer-motion";
-import { Handshake, Users, Rocket, BookOpen, Target } from "lucide-react";
+import SolutionMatchmaking from "../../assets/solution123.gif";
+import Collaborative from "../../assets/collaboration.gif";
+import PilotSupport from "../../assets/Pilotscaling.gif";
+import KnowledgeSharing from "../../assets/Knowledgesharing.gif";
+import { Users, Target } from "lucide-react";
 
 const cards = [
   {
-    icon: Handshake,
+    icon: SolutionMatchmaking,
     title: "Solution Matchmaking",
     desc: "Vetted connections between clean-tech innovators and industrial adopters ensure each match offers a clear path to commercial ROI.",
   },
   {
-    icon: Users,
+    icon: Collaborative,
     title: "Collaborative Partnerships",
     desc: "OEMs, Tier-1 suppliers, and technical experts join forces to build resilient, low-carbon supply chains and shared infrastructure.",
   },
   {
-    icon: Rocket,
+    icon: PilotSupport,
     title: "Pilot & Scaling Programs",
     desc: "Structured pilots, performance validation, and deployment support de-risk innovation adoption across the Valley of Death.",
   },
   {
-    icon: BookOpen,
+    icon: KnowledgeSharing,
     title: "Knowledge Sharing",
     desc: "Cross-industry knowledge sharing, regulatory guidance, technical resources and workshops keep partners ahead of the market.",
   },
@@ -27,14 +31,14 @@ const cards = [
 export default function EcosystemEnablement() {
   return (
     <section className="py-20 px-5 bg-white">
-      <div className="max-w-[1800px] mx-auto">
+      <div className="max-w-[1800px] bg-[url('assets/decarbonx1.jpeg')]  bg-contain bg-left mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
           className="
-            bg-[#F7F9F8]
+           bg-[#F7F8F7]/50
             rounded-[28px]
             border
             border-[#E8ECEA]
@@ -94,7 +98,7 @@ export default function EcosystemEnablement() {
                   viewBox="0 0 500 260"
                   className="absolute inset-0 w-full h-full"
                 >
-                  <g stroke="#D8E3DD" strokeWidth="2" fill="none">
+                  <g stroke="#2a5e4b" strokeWidth="2" fill="#2a5e4b">
                     <line x1="120" y1="120" x2="250" y2="70" />
                     <line x1="120" y1="120" x2="250" y2="190" />
                     <line x1="250" y1="70" x2="390" y2="100" />
@@ -107,56 +111,56 @@ export default function EcosystemEnablement() {
                     cx="120"
                     cy="120"
                     r="42"
-                    fill="#fff"
-                    stroke="#D8E3DD"
+                    fill="#2a5e4b"
+                    stroke="#2a5e4b"
                   />
 
                   <circle
                     cx="250"
                     cy="70"
                     r="28"
-                    fill="#fff"
-                    stroke="#D8E3DD"
+                    fill="#4caf50"
+                    stroke="#2a5e4b"
                   />
 
                   <circle
                     cx="250"
                     cy="190"
                     r="28"
-                    fill="#fff"
-                    stroke="#D8E3DD"
+                    fill="#1abc9c"
+                    stroke="#2a5e4b"
                   />
 
                   <circle
                     cx="390"
                     cy="100"
                     r="28"
-                    fill="#fff"
-                    stroke="#D8E3DD"
+                    fill="#f39c12"
+                    stroke="#2a5e4b"
                   />
 
                   <circle
                     cx="390"
                     cy="160"
                     r="28"
-                    fill="#fff"
-                    stroke="#D8E3DD"
+                    fill="#e74c3c"
+                    stroke="#2a5e4b"
                   />
 
                   <circle
                     cx="450"
                     cy="60"
                     r="24"
-                    fill="#fff"
-                    stroke="#D8E3DD"
+                    fill="#f1c40f"
+                    stroke="#2a5e4b"
                   />
 
                   <circle
                     cx="450"
                     cy="220"
                     r="24"
-                    fill="#fff"
-                    stroke="#D8E3DD"
+                    fill="#1f5fa8"
+                    stroke="#2a5e4b"
                   />
                 </svg>
 
@@ -226,14 +230,18 @@ export default function EcosystemEnablement() {
                           w-20
                           h-20
                           rounded-full
-                          bg-[#67A55D]
+                        
                           flex
                           items-center
                           justify-center
                           mx-auto
                         "
                       >
-                        <Icon size={36} className="text-white" />
+                        <img
+                          src={card.icon}
+                          alt={card.title}
+                          className="w-14 h-14 object-contain"
+                        />
                       </div>
 
                       <h3

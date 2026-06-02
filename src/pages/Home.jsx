@@ -16,7 +16,7 @@ import CTASection from "../components/Home/CTASection";
 import PageWrapper from "../components/PageWrapper";
 
 // Assets
-import homeImg from "../assets/prior.gif";
+import homeImg from "../assets/cycling.gif";
 
 // API + Card
 import API from "../api";

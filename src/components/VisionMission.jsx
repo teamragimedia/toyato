@@ -6,7 +6,7 @@ import bgImage from "../assets/vision.jpeg";
 
 const VisionMission = () => {
   return (
-    <section className="relative w-full bg-cover bg-center py-20 px-4 overflow-hidden">
+    <section className="relative bg-slate-50 w-full bg-cover bg-center py-20 px-4 overflow-hidden">
       {/* Dark Overlay */}
       <div className="absolute inset-0"></div>
 
@@ -17,9 +17,9 @@ const VisionMission = () => {
         </h2>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid  grid-cols-1 md:grid-cols-2 gap-10">
           {/* Vision */}
-          <div className="bg-white rounded-3xl p-10 shadow-2xl text-center transition-transform duration-300 hover:-translate-y-2">
+          <div className="bg-slate-50 rounded-3xl p-10 shadow-2xl text-center transition-transform duration-300 hover:-translate-y-2">
             <div className="flex justify-center mb-6">
               <div className="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center">
                 <img

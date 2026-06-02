@@ -1,44 +1,40 @@
 import { motion } from "framer-motion";
-import {
-  ClipboardCheck,
-  Network,
-  Droplets,
-  Recycle,
-  Wrench,
-  PieChart,
-  Leaf,
-  ArrowRight,
-} from "lucide-react";
-
-import Dassplant from "../../assets/daas-plant.png";
+import Carbonfootprint from "../../assets/carbonfootprint.gif";
+import TechnologyIdentification from "../../assets/technologyidentification.gif";
+import WaterRecycling from "../../assets/waterrecycling.gif";
+import EPC from "../../assets/EPC.gif";
+import Monitoring from "../../assets/Monitoring.gif";
+import Performancedriven from "../../assets/performancedriven.gif";
+import CCUS from "../../assets/Collaborative.gif";
+import { Leaf, ArrowRight } from "lucide-react";
 
 const services = [
   {
-    icon: ClipboardCheck,
+    icon: Carbonfootprint,
     text: "Carbon footprint assessment & energy audits",
   },
   {
-    icon: Network,
+    icon: TechnologyIdentification,
     text: "Technology identification and deployment",
   },
   {
-    icon: Droplets,
+    icon: WaterRecycling,
     text: "Water recycling",
   },
   {
-    icon: Recycle,
+    icon: CCUS,
     text: "CCUS, renewable energy, Bio-CNG, and energy efficiency solutions",
   },
   {
-    icon: Wrench,
+    icon: EPC,
     text: "EPC, operations & maintenance support",
   },
   {
-    icon: PieChart,
+    icon: Monitoring,
     text: "Monitoring, reporting carbon accounting",
   },
   {
-    icon: Leaf,
+    icon: Performancedriven,
     text: "Performance-driven and outcome-based delivery models",
   },
 ];
@@ -61,7 +57,7 @@ export default function DaasSection() {
               viewport={{ once: true }}
               className="relative z-10 max-w-5xl mx-auto text-center"
             >
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#205B49]">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#005CA2]">
                 Decarbonization-as-a-Service (DaaS)
               </h2>
 
@@ -75,77 +71,68 @@ export default function DaasSection() {
             </motion.div>
 
             {/* Cards */}
+            {/* Cards */}
             <div className="relative z-10 mt-16">
               <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {services.map((item, index) => {
-                  const Icon = item.icon;
-
-                  return (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      whileHover={{
-                        y: -10,
-                        scale: 1.02,
-                      }}
-                      transition={{
-                        duration: 0.4,
-                        delay: index * 0.08,
-                      }}
-                      viewport={{ once: true }}
+                {services.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    whileHover={{
+                      y: -10,
+                      scale: 1.02,
+                    }}
+                    transition={{
+                      duration: 0.4,
+                      delay: index * 0.08,
+                    }}
+                    viewport={{ once: true }}
+                    className="
+          group
+          bg-white
+          border
+          border-[#E3EBE6]
+          rounded-[28px]
+          p-8
+          shadow-sm
+          hover:shadow-2xl
+          hover:border-[#75A66B]
+          transition-all
+          duration-300
+          text-center
+          min-h-[230px]
+          flex
+          flex-col
+          justify-center
+          items-center
+        "
+                  >
+                    <div
                       className="
-              group
-              bg-white
-              border
-              border-[#E3EBE6]
-              rounded-[28px]
-              p-8
-              shadow-sm
-              hover:shadow-2xl
-              hover:border-[#75A66B]
-              transition-all
-              duration-300
-              text-center
-              min-h-[230px]
-              flex
-              flex-col
-              justify-center
-              items-center
-            "
+            w-20
+            h-20
+            rounded-3xl
+            bg-[#F3F8F4]
+            flex
+            items-center
+            justify-center
+            mb-6
+            overflow-hidden
+          "
                     >
-                      <div
-                        className="
-                w-20
-                h-20
-                rounded-3xl
-                bg-[#F3F8F4]
-                flex
-                items-center
-                justify-center
-                mb-6
-                group-hover:bg-[#75A66B]
-                transition-all
-                duration-300
-              "
-                      >
-                        <Icon
-                          size={36}
-                          className="
-                  text-[#75A66B]
-                  group-hover:text-white
-                  transition-all
-                  duration-300
-                "
-                        />
-                      </div>
+                      <img
+                        src={item.icon}
+                        alt={item.text}
+                        className="w-14 h-14 object-contain"
+                      />
+                    </div>
 
-                      <p className="text-[#2B4F45] font-medium leading-8 text-lg">
-                        {item.text}
-                      </p>
-                    </motion.div>
-                  );
-                })}
+                    <p className="text-[#2B4F45] font-medium leading-8 text-lg">
+                      {item.text}
+                    </p>
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
@@ -179,7 +166,7 @@ export default function DaasSection() {
 
           {/* CTA Footer */}
 
-          <div className="bg-[#006D67] relative overflow-hidden">
+          <div className="bg-[#1f5c4d] relative overflow-hidden">
             <div className="grid lg:grid-cols-[1.1fr_1fr_280px] gap-8 items-center px-8 lg:px-12 py-10">
               <div>
                 <h3 className="text-white text-[38px] font-bold leading-tight">
@@ -206,18 +193,20 @@ export default function DaasSection() {
                   }}
                   className="
                     bg-white
-                    text-[#006D67]
+                    text-[#28604D]
                     px-8
                     py-4
                     rounded-2xl
-                    font-semibold
+                    font-black
+                    text-[18px]
                     flex
                     items-center
                     gap-3
+                    
                   "
                 >
                   Connect With Us
-                  <ArrowRight size={20} />
+                  {/* <ArrowRight size={20} /> */}
                 </motion.button>
               </div>
             </div>

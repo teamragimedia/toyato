@@ -4,7 +4,6 @@ import AboutCards from "../components/AboutCards";
 import Objectives from "../components/Objectives";
 import VisionMission from "../components/VisionMission";
 import PriorityAreas from "../components/PriorityAreas";
-import aboutImg from "../assets/renewable energy animation.gif";
 import Growth from "../components/Journeytimeline";
 import GlobalOutreach from "../components/GlobalOutreach";
 import EngagementModel from "../components/EngagementModel";
@@ -20,7 +19,7 @@ const About = () => {
         <AboutCards />
         <Objectives />
         <VisionMission />
-        <PriorityAreas image={aboutImg} />
+        <PriorityAreas />
         <Growth />
         <GlobalOutreach />
         <EngagementModel />

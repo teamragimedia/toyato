@@ -53,7 +53,7 @@ const data = [
 const PriorityAreas = ({ variant = "about", image }) => {
   return (
     <section
-      className={`pa-section ${variant}`}
+      className={`pa-section`}
       style={{
         backgroundImage: `url(${bgImage})`,
       }}
@@ -61,7 +61,9 @@ const PriorityAreas = ({ variant = "about", image }) => {
       <div className="pa-container">
         <h2 className="pa-title pb-9">Priority Areas</h2>
 
-        {image && <img src={image} alt="decor" className="pa-house" />}
+        {variant === "home" && image && (
+          <img src={image} alt="Cyclist" className="pa-cyclist" />
+        )}
 
         <div className="pa-grid">
           {data.map((item, index) => (
