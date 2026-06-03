@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../api";
 
 export default function AdminUsers() {
   const [admins, setAdmins] = useState([]);

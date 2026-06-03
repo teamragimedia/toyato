@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import API from "../api";
 
 export default function CreateAdmin() {
   const [form, setForm] = useState({
