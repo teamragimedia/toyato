@@ -2,66 +2,60 @@ import React, { useEffect, useState } from "react";
 import getImage from "../utils/getImage";
 import API from "../api";
 import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
-import { IoClose } from "react-icons/io5"; // ✅ CLOSE ICON
+import { IoClose } from "react-icons/io5";
 import "../styles/Modal.css";
 
 const SolutionModal = ({ data, onClose, refresh }) => {
   const [reaction, setReaction] = useState(null);
-  const [localData, setLocalData] = useState(null);
 
-  // ================= SYNC DATA =================
   useEffect(() => {
-    if (data) {
-      setLocalData(data);
+    if (!data) return;
 
-      const saved = localStorage.getItem(`reaction-${data._id}`);
-      setReaction(saved || null);
-    }
+    const saved = localStorage.getItem(`reaction-${data._id}`);
+    setReaction(saved || null);
+
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [data]);
 
-  if (!data || !localData) return null;
+  if (!data) return null;
 
-  // ================= LIKE =================
   const handleLike = async () => {
     if (reaction === "like") return;
 
     try {
-      let res;
-
       if (reaction === "dislike") {
-        res = await API.patch(`/solutions/${data._id}/switch-to-like`);
+        await API.patch(`/solutions/${data._id}/switch-to-like`);
       } else {
-        res = await API.patch(`/solutions/${data._id}/like`);
+        await API.patch(`/solutions/${data._id}/like`);
       }
 
       setReaction("like");
       localStorage.setItem(`reaction-${data._id}`, "like");
-      setLocalData(res.data);
 
-      refresh && refresh();
+      refresh?.();
     } catch (err) {
       console.error(err);
     }
   };
 
-  // ================= DISLIKE =================
   const handleDislike = async () => {
     if (reaction === "dislike") return;
 
     try {
-      let res;
-
       if (reaction === "like") {
-        res = await API.patch(`/solutions/${data._id}/switch-to-dislike`);
+        await API.patch(`/solutions/${data._id}/switch-to-dislike`);
       } else {
-        res = await API.patch(`/solutions/${data._id}/dislike`);
+        await API.patch(`/solutions/${data._id}/dislike`);
       }
 
       setReaction("dislike");
       localStorage.setItem(`reaction-${data._id}`, "dislike");
-      setLocalData(res.data);
 
-      refresh && refresh();
+      refresh?.();
     } catch (err) {
       console.error(err);
     }
@@ -70,21 +64,18 @@ const SolutionModal = ({ data, onClose, refresh }) => {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        {/* ================= IMAGE ================= */}
+        {/* IMAGE */}
         <div className="modal-image-wrapper">
-          {localData?.image && (
-            <img src={getImage(localData.image)} alt={localData.title} />
-          )}
+          {data.image && <img src={getImage(data.image)} alt={data.title} />}
 
-          {/* ✅ CLOSE ICON */}
           <button className="close-icon" onClick={onClose}>
             <IoClose />
           </button>
         </div>
 
-        {/* ================= HEADER ================= */}
+        {/* HEADER */}
         <div className="modal-header">
-          <span className="pill">{localData.category}</span>
+          <span className="pill">{data.category}</span>
 
           <div className="actions">
             <button
@@ -92,7 +83,7 @@ const SolutionModal = ({ data, onClose, refresh }) => {
               onClick={handleLike}
             >
               <FaThumbsUp />
-              <span>{localData.likes || 0}</span>
+              <span>{data.likes || 0}</span>
             </button>
 
             <button
@@ -102,37 +93,37 @@ const SolutionModal = ({ data, onClose, refresh }) => {
               onClick={handleDislike}
             >
               <FaThumbsDown />
-              <span>{localData.dislikes || 0}</span>
+              <span>{data.dislikes || 0}</span>
             </button>
           </div>
         </div>
 
-        {/* ================= TITLE ================= */}
-        <h2 className="modal-title">{localData.title}</h2>
+        {/* TITLE */}
+        <h2 className="modal-title">{data.title}</h2>
 
-        {/* ================= PROBLEM ================= */}
+        {/* PROBLEM */}
         <div className="section">
           <p className="label">Problem</p>
-          <p>{localData.problem}</p>
+          <p>{data.problem}</p>
         </div>
 
-        {/* ================= SOLUTION ================= */}
+        {/* SOLUTION */}
         <div className="section">
           <p className="label">Solution</p>
-          <p>{localData.solution}</p>
+          <p>{data.solution}</p>
         </div>
 
-        {/* ================= FEATURES ================= */}
+        {/* FEATURES */}
         <div className="section">
           <p className="label">Key Features</p>
+
           <div className="features">
-            {localData.features?.map((f, i) => (
-              <span key={i}>{f}</span>
+            {data.features?.map((feature, index) => (
+              <span key={index}>{feature}</span>
             ))}
           </div>
         </div>
 
-        {/* ================= BUTTON ================= */}
         <button className="contact-btn">Contact for more details</button>
       </div>
     </div>

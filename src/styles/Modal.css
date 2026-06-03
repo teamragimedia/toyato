@@ -2,23 +2,30 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  z-index: 99999;
+
+  background: rgba(0, 0, 0, 0.65);
+
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* 📱 mobile bottom sheet */
-  z-index: 999999;
-  padding: 10px;
+  align-items: center;
+
+  padding: 20px;
+
+  overflow-y: auto;
 }
 
-/* ================= MODAL BOX ================= */
 .modal-content {
   width: 100%;
-  background: #fff;
-  border-radius: 16px 16px 0 0;
-  overflow: hidden;
+  max-width: 950px;
   max-height: 90vh;
+
   overflow-y: auto;
-  animation: slideUp 0.3s ease;
+
+  background: #fff;
+  border-radius: 20px;
+
+  position: relative;
 }
 
 /* ================= IMAGE ================= */

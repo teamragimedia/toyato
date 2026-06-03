@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import SolutionsHero from "../components/SolutionHero";
 import StatsSection from "../components/StatsSection";
 import SolutionCard from "../components/SolutionCard";
-import SolutionModal from "../components/SolutionModal"; 
+import SolutionModal from "../components/SolutionModal";
 import API from "../api";
 import "../styles/Solutions.css";
 import PageWrapper from "../components/PageWrapper";
+import { createPortal } from "react-dom";
 
 const categories = [
   "All",
@@ -122,11 +123,15 @@ const Solutions = () => {
         </section>
 
         {/* ================= MODAL ================= */}
-        <SolutionModal
-          data={selectedSolution}
-          onClose={handleClose}
-          refresh={fetchSolutions}
-        />
+        {selectedSolution &&
+          createPortal(
+            <SolutionModal
+              data={selectedSolution}
+              onClose={handleClose}
+              refresh={fetchSolutions}
+            />,
+            document.body,
+          )}
       </>
     </PageWrapper>
   );
