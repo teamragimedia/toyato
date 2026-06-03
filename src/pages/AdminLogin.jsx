@@ -10,10 +10,7 @@ export default function AdminLogin() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
-        form,
-      );
+      const res = await axios.post("/auth/login", form);
 
       console.log("LOGIN RESPONSE:", res.data); // 🔍 debug
 

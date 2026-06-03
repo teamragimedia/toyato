@@ -17,7 +17,7 @@ export default function CreateAdmin() {
 
   const handleSubmit = async () => {
     try {
-      await axios.post("http://localhost:5000/api/admin/create", form);
+      await axios.post("/admin/create", form);
 
       alert("✅ Admin created successfully");
 

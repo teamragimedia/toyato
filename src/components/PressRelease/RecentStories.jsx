@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../../api";
 import { createPortal } from "react-dom";
 
 export default function RecentStories() {
@@ -7,10 +7,25 @@ export default function RecentStories() {
   const [selectedStory, setSelectedStory] = useState(null);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/press/recent")
-      .then((res) => setData(res.data))
-      .catch(console.error);
+    const fetchRecentStories = async () => {
+      try {
+        const res = await API.get("/press/recent");
+
+        console.log("RECENT STORIES:", res.data);
+
+        if (Array.isArray(res.data)) {
+          setData(res.data);
+        } else {
+          console.error("Not an array:", res.data);
+          setData([]);
+        }
+      } catch (err) {
+        console.error(err);
+        setData([]);
+      }
+    };
+
+    fetchRecentStories();
   }, []);
 
   return (
@@ -20,42 +35,45 @@ export default function RecentStories() {
       </h2>
 
       <div className="space-y-6">
-        {data.map((item) => (
-          <div
-            key={item._id}
-            className="flex flex-col md:flex-row gap-4 bg-white p-4 rounded-xl shadow"
-          >
-            {/* Image */}
-            <img
-              src={`http://localhost:5000/uploads/${item.image}`}
-              alt=""
-              className="w-full md:w-32 h-40 md:h-24 object-cover rounded-lg"
-            />
-
-            {/* Content */}
-            <div className="flex-1">
-              <p className="text-blue-600 text-sm uppercase">{item.category}</p>
-
-              <h3 className="font-semibold text-lg">{item.title}</h3>
-
-              <p className="text-gray-500 text-sm">
-                {new Date(item.createdAt).toDateString()}
-              </p>
-
-              <p className="text-gray-600 text-sm mt-1 line-clamp-2">
-                {item.description}
-              </p>
-            </div>
-
-            {/* Read More */}
-            <button
-              onClick={() => setSelectedStory(item)}
-              className="text-blue-600 bg-white border-none flex items-center gap-1 hover:gap-2 transition-all"
+        {Array.isArray(data) &&
+          data.map((item) => (
+            <div
+              key={item._id}
+              className="flex flex-col md:flex-row gap-4 bg-white p-4 rounded-xl shadow"
             >
-              Read More <span>→</span>
-            </button>
-          </div>
-        ))}
+              {/* Image */}
+              <img
+                src={`/uploads/${item.image}`}
+                alt=""
+                className="w-full md:w-32 h-40 md:h-24 object-cover rounded-lg"
+              />
+
+              {/* Content */}
+              <div className="flex-1">
+                <p className="text-blue-600 text-sm uppercase">
+                  {item.category}
+                </p>
+
+                <h3 className="font-semibold text-lg">{item.title}</h3>
+
+                <p className="text-gray-500 text-sm">
+                  {new Date(item.createdAt).toDateString()}
+                </p>
+
+                <p className="text-gray-600 text-sm mt-1 line-clamp-2">
+                  {item.description}
+                </p>
+              </div>
+
+              {/* Read More */}
+              <button
+                onClick={() => setSelectedStory(item)}
+                className="text-blue-600 bg-white border-none flex items-center gap-1 hover:gap-2 transition-all"
+              >
+                Read More <span>→</span>
+              </button>
+            </div>
+          ))}
       </div>
 
       {/* 🔥 MODAL */}
@@ -86,7 +104,7 @@ export default function RecentStories() {
               {/* Image */}
               {selectedStory.image && (
                 <img
-                  src={`http://localhost:5000/uploads/${selectedStory.image}`}
+                  src={`/uploads/${selectedStory.image}`}
                   className="w-full h-48 md:h-64 object-cover"
                 />
               )}

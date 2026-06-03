@@ -5,7 +5,7 @@ function AdminPanel() {
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/pitch")
+    fetch("/pitch")
       .then((res) => res.json())
       .then((res) => setData(res));
   }, []);

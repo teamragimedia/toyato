@@ -47,9 +47,7 @@ router.post("/", upload.single("file"), async (req, res) => {
       team_size,
 
       // 🔥 FIXED FILE STORAGE
-      file: req.file
-        ? `http://localhost:5000/uploads/${req.file.filename}`
-        : null,
+      file: req.file ? `/uploads/${req.file.filename}` : null,
     });
 
     await newPitch.save();

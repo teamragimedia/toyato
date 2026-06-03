@@ -19,7 +19,7 @@ const getImage = (name) => {
   }
 
   // ✅ NEW: backend uploaded image
-  return `http://localhost:5000/uploads/${name}`;
+  return `/uploads/${name}`;
 };
 
 export default getImage;

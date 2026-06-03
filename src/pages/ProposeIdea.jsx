@@ -132,7 +132,7 @@ function ProposeIdea() {
         formData.append("file", file);
       }
 
-      const res = await fetch("http://localhost:5000/api/pitch", {
+      const res = await fetch("/pitch", {
         method: "POST",
         body: formData,
       });

@@ -9,7 +9,7 @@ export default function AdminUsers() {
   // 🔥 FETCH ADMINS
   const fetchAdmins = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/all", {
+      const res = await axios.get("/admin/all", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -31,7 +31,7 @@ export default function AdminUsers() {
   // 🔥 DELETE ADMIN
   const deleteAdmin = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/admin/${id}`, {
+      await axios.delete(`/admin/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -47,7 +47,7 @@ export default function AdminUsers() {
   const updateRole = async (id, role) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/admin/${id}`,
+        `/admin/${id}`,
         { role },
         {
           headers: {

@@ -22,7 +22,7 @@ export default function AdminPress() {
 
   // ================= FETCH =================
   const fetchStories = async () => {
-    const res = await axios.get("http://localhost:5000/api/press");
+    const res = await axios.get("/press");
     setStories(res.data);
   };
 
@@ -47,7 +47,7 @@ export default function AdminPress() {
 
       data.append("image", image);
 
-      await axios.post("http://localhost:5000/api/press/create", data);
+      await axios.post("/press/create", data);
 
       alert("Story Added 🚀");
 
@@ -73,17 +73,14 @@ export default function AdminPress() {
   const deleteStory = async (id) => {
     if (!window.confirm("Delete this story?")) return;
 
-    await axios.delete(`http://localhost:5000/api/press/${id}`);
+    await axios.delete(`/press/${id}`);
     fetchStories();
   };
 
   // ================= UPDATE =================
   const updateStory = async () => {
     try {
-      await axios.put(
-        `http://localhost:5000/api/press/${editing._id}`,
-        editing,
-      );
+      await axios.put(`/press/${editing._id}`, editing);
 
       setEditing(null);
       fetchStories();
@@ -159,7 +156,7 @@ export default function AdminPress() {
               className="flex items-center gap-4 bg-white p-4 rounded-xl shadow"
             >
               <img
-                src={`http://localhost:5000/uploads/${item.image}`}
+                src={`/uploads/${item.image}`}
                 className="w-24 h-16 object-cover rounded"
               />
 
@@ -274,10 +271,7 @@ export default function AdminPress() {
                     data.append("image", editing.newImage);
                   }
 
-                  await axios.put(
-                    `http://localhost:5000/api/press/${editing._id}`,
-                    data,
-                  );
+                  await axios.put(`/press/${editing._id}`, data);
 
                   setEditing(null);
                   fetchStories();
