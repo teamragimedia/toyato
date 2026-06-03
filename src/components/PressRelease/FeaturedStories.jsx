@@ -50,7 +50,7 @@ export default function FeaturedStories() {
   };
 
   return (
-    <section className="container max-w-[1200px] px-6 md:px-12 py-10 bg-white relative">
+    <section className="container max-w-[1800px] align-middle content-center px-6 md:px-12 py-10 bg-white relative">
       <h2 className="text-2xl font-bold mb-8 text-center text-black">
         Featured Stories
       </h2>

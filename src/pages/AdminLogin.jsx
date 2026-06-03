@@ -10,11 +10,10 @@ export default function AdminLogin() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("/auth/login", form);
+      const res = await API.post("/auth/login", form);
 
-      console.log("LOGIN RESPONSE:", res.data); // 🔍 debug
+      console.log("LOGIN RESPONSE:", res.data);
 
-      // 🔥 MUST EXIST
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
 
@@ -24,7 +23,6 @@ export default function AdminLogin() {
       alert("Invalid credentials");
     }
   };
-
   return (
     <div className="login-wrapper">
       <motion.div
