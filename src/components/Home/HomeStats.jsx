@@ -162,13 +162,13 @@ const stats = [
     color: "#06b6d4",
     gif: pucGif,
   },
-  {
-    value: 6,
-    suffix: "+",
-    label: "MOU Signed",
-    color: "#ef4444",
-    gif: mouGif,
-  },
+  // {
+  //   value: 6,
+  //   suffix: "+",
+  //   label: "MOU Signed",
+  //   color: "#ef4444",
+  //   gif: mouGif,
+  // },
 ];
 
 const HomeStats = () => {

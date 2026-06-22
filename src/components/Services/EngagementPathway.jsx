@@ -142,7 +142,7 @@ const steps = [
   },
   {
     id: 7,
-    label: "MoU Signing",
+    label: "Signing",
     position: "top",
     color: "#ef4444",
     bg: "bg-red-500",

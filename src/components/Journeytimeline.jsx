@@ -20,19 +20,14 @@ const steps = [
   {
     year: "2023",
     title: "GROWTH PHASE",
-    points: ["2+ Clean MoUs", "800+ Startups Evaluated", "5+ POCs"],
+    points: ["800+ Startups Evaluated", "5+ POCs"],
     icon: icon2023,
     color: "blues",
   },
   {
     year: "2024",
     title: "EXPANSION",
-    points: [
-      "3+ Clean MoUs",
-      "2+ IIT MoUs",
-      "1000+ Startups Evaluated",
-      "7+ POCs",
-    ],
+    points: ["1000+ Startups Evaluated", "7+ POCs"],
     icon: icon2024,
     color: "greens",
   },
